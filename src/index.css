@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+#taustakuva{
+ background-image: url("Images/tarjoiluehdotus.jpg");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}
+
 h1 {
   font-family: 'Pacifico', cursive;
   
