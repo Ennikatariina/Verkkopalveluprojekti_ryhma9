@@ -30,10 +30,10 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link link-dark px-2">Login</a>
+              <a href="#" className="nav-link link-dark px-2">Kirjaudu</a>
               </li>
             <li className="nav-item">
-              <a href="#" className="nav-link link-dark px-2">Sign up</a>
+              <a href="#" className="nav-link link-dark px-2">Rekisteröidy</a>
             </li>
           </ul>
         </div>
