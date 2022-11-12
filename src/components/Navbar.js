@@ -29,6 +29,12 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="#">Suolaiset</a></li>
               </ul>
             </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link link-dark px-2">Login</a>
+              </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link link-dark px-2">Sign up</a>
+            </li>
           </ul>
         </div>
       </div>
