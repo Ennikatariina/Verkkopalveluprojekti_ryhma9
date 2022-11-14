@@ -1,4 +1,5 @@
 import React from "react";
+import GoogleMaps from "./GoogleMaps/GoogleMaps";
 
 export default function Footer() {
     return (
@@ -24,7 +25,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="col-6 col-md-3 mb-3">
+                    <div className="col-6 col-md-2 mb-3">
                         <h5>Yhteystiedot</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
@@ -46,7 +47,11 @@ export default function Footer() {
                                 sumppi@mail.com
                             </li>
                         </ul>
+                    </div >
+                    <div className="col-6 col-md-3 mb-3">
+                    <GoogleMaps/>
                     </div>
+                    
                 </div>
 
             </footer>
