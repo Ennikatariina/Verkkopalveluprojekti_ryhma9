@@ -16,17 +16,13 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="#">Tiskin takana</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Hinnasto</a>
-            </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Tuotteet
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Juomat</a></li>
-                <li><a className="dropdown-item" href="#">Makeat</a></li>
-                <li><a className="dropdown-item" href="#">Suolaiset</a></li>
+                <li><a className="dropdown-item" href="#">Juotavat</a></li>
+                <li><a className="dropdown-item" href="#">Syötävät</a></li>
               </ul>
             </li>
             <li className="nav-item">
@@ -35,6 +31,9 @@ export default function Navbar() {
             <li className="nav-item">
               <a href="#" className="nav-link link-dark px-2">Rekisteröidy</a>
             </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link link-dark px-2">Ostoskori!</a>
+              </li>
           </ul>
         </div>
       </div>
