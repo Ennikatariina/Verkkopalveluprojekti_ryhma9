@@ -2,9 +2,11 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer'
 import Home from './pages/Home';
-import Products from './pages/Products';
+import Products from './pages/Drinks';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Drinks from './pages/Drinks';
+import Snacks from './pages/Snacks';
 
 
 function App() {
@@ -15,7 +17,8 @@ function App() {
     <div>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/products" element={<Products/>} />
+            <Route path="/drinks" element={<Drinks/>} />
+            <Route path="/snacks" element={<Snacks/>} />
         </Routes>
     </div>
     <Footer/>
