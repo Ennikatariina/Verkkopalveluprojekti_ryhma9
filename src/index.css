@@ -27,3 +27,10 @@ h1 {
 .navbar-brand {
   font-family: 'Pacifico', cursive;
 }
+
+.navbar-right .nav-link{
+
+   position:relative;
+   float:right;
+
+}
