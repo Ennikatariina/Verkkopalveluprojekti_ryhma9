@@ -12,8 +12,8 @@ code {
     monospace;
 }
 
-#taustakuva{
- background-image: url("Images/tarjoiluehdotus.jpg");
+#taustakuva{ /**headeri(main)*/
+ background-image: url("images/tarjoiluehdotus.jpg");
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
@@ -21,16 +21,14 @@ code {
 
 h1 {
   font-family: 'Pacifico', cursive;
-  
+ 
 }
 
-.navbar-brand {
+.display-4 {  /**tällä voi säätää headerissa(main) otsikon kokoa*/
+  font-size: 90px;
+}
+
+.navbar-brand { /**tällä voi säätää navbarin Sumppia*/
   font-family: 'Pacifico', cursive;
-}
-
-.navbar-right .nav-link{
-
-   position:relative;
-   float:right;
-
+  font-size: 25px;
 }
