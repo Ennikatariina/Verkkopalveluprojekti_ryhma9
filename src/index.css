@@ -34,5 +34,5 @@ h1 {
 }
 
 .navbar-right{
-  align-content: space-between;
+  float: right;
 }

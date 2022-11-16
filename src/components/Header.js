@@ -7,7 +7,6 @@ export default function Header() {
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Sumppi</h1>
             <p className="lead fw-normal">Maku joka muistetaan</p>
-            <a className="btn btn-outline-secondary" href="#">Verkkokauppaan!</a>
           </div>
           <div className="product-device shadow-sm d-none d-md-block"></div>
           <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
