@@ -1,4 +1,5 @@
 import React from 'react'
+import picture1 from '../images/tarjoiluehdotus.jpg'
 
 export default function Home() {
   return (
@@ -9,17 +10,60 @@ export default function Home() {
         <h2>kahvilan ajatus</h2>
       </div>
 
-<div className="card mb-3">
+Kortti 1 
+<div className="card mb-3 container">
   <div className="row g-0">
-    <div className="col-md-4">
-    <img src="../images/tarjoiluehdotus.jpg" className="img-fluid rounded-start " alt="kuva"/> 
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
     </div>
-    <div className="col-md-8">
+    <div className="col-md-6">
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+        <h5 className="card-title">Kahvit</h5>
+        <p className="card-text">Uskomattomat kahvit....</p>
       </div>
+    </div>
+  </div>
+</div>
+/*Kortti 2 */
+<div className="card mb-3 container">
+  <div className="row g-0">
+  <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Teet</h5>
+        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
+    </div>
+  </div>
+</div>
+
+/*Kortti 3 */
+<div className="card mb-3 container">
+  <div className="row g-0">
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
+    </div>
+    <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Makeat herkut</h5>
+        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+/*Kortti 4 */
+<div className="card mb-3 container">
+  <div className="row g-0">
+  <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Suolat herkut</h5>
+        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
     </div>
   </div>
 </div>
