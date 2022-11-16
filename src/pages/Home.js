@@ -1,4 +1,5 @@
 import React from 'react'
+import picture1 from '../images/tarjoiluehdotus.jpg'
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
 <div className="card mb-3">
   <div className="row g-0">
     <div className="col-md-4">
-    <img src="../images/tarjoiluehdotus.jpg" className="img-fluid rounded-start " alt="kuva"/> 
+    <img src={picture1} className="img-fluid rounded-start " alt="kuva"/> 
     </div>
     <div className="col-md-8">
       <div className="card-body">
