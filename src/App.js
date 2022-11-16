@@ -1,12 +1,11 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer'
-import Home from './pages/Home';
-import Products from './pages/Drinks';
+import Home from './pages/Home/Home';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import Drinks from './pages/Drinks';
-import Snacks from './pages/Snacks';
+import Drinks from './pages/Drinks/Drinks';
+import Snacks from './pages/Snacks/Snacks';
 
 
 function App() {

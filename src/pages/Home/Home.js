@@ -1,5 +1,5 @@
 import React from 'react'
-import picture1 from '../images/tarjoiluehdotus.jpg'
+import picture1 from '../../images/tarjoiluehdotus.jpg'
 
 export default function Home() {
   return (
@@ -11,6 +11,49 @@ export default function Home() {
       </div>
 
 /*Kortti 1*/ 
+/*Tällä kortit saa: https://codepen.io/duness/pen/vezOYW */
+<div className="card mb-3 container">
+  <div className="row g-0">
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
+    </div>
+    <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Kahvit</h5>
+        <p className="card-text">Uskomattomat kahvit....</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="card mb-3 container">
+  <div className="row g-0">
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
+    </div>
+    <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Kahvit</h5>
+        <p className="card-text">Uskomattomat kahvit....</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="card mb-3 container">
+  <div className="row g-0">
+    <div className="col-md-6">
+    <img src={picture1} className="img-fluid" alt="kuva"/> 
+    </div>
+    <div className="col-md-6">
+      <div className="card-body">
+        <h5 className="card-title">Kahvit</h5>
+        <p className="card-text">Uskomattomat kahvit....</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div className="card mb-3 container">
   <div className="row g-0">
     <div className="col-md-6">
