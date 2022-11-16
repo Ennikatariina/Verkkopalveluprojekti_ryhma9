@@ -10,7 +10,7 @@ export default function Home() {
         <h2>kahvilan ajatus</h2>
       </div>
 
-Kortti 1 
+/*Kortti 1*/ 
 <div className="card mb-3 container">
   <div className="row g-0">
     <div className="col-md-6">
