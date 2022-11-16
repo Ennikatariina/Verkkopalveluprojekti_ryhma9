@@ -27,6 +27,8 @@ export default function Navbar() {
             </li>
             <div className= "navbar-right">
             <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Kirjaudu</a></li>
+            </div>
+            <div className= "navbar-right">
             <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Rekisteröidy</a></li>
             </div>
           </ul>
