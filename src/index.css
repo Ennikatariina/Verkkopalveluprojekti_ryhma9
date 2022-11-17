@@ -18,7 +18,7 @@ code {
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
- box-shadow: 0px 2px 5px #261b12;
+ box-shadow: 0px 2px 2px 0px #261b12;
 }
 
 h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Tämän vois toki vielä muuttaa*/
@@ -38,6 +38,9 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
 .navbar{
   background-color: #b48868;
   height: 80px;
+}
 
+#navbarNavDropdown {
+  font-size: 18px;
 
 }
