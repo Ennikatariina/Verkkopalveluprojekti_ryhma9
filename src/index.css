@@ -12,14 +12,14 @@ code {
     monospace;
 }
 
-#taustakuva{ /**headeri(main)*/
+#taustakuva{ /**headeri(main) taustakuva*/
  background-image: url("images/tarjoiluehdotus.jpg");
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
 }
 
-h1 {
+h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Tämän vois toki vielä muuttaa*/
   font-family: 'Pacifico', cursive;
  
 }
