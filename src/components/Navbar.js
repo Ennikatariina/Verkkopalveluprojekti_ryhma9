@@ -24,15 +24,14 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="#">Juotavat</a></li>
                 <li><a className="dropdown-item" href="#">Syötävät</a></li>
               </ul>
-            </li>
-            <div className= "navbar-right">
-            <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Kirjaudu</a></li>
-            </div>
-            <div className= "navbar-right">
-            <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Rekisteröidy</a></li>
-            </div>
+              </li>
           </ul>
         </div>
+        <div class="nav-right">
+            <a href="#" className="nav-link link-dark px-2">Kirjaudu</a> </div>
+            <div className="nav-right">
+            <a href="#" className="nav-link link-dark px-2">Rekisteröidy</a></div>
+            <div className="nav-right"><a href="#" className="nav-link link-dark px-2">Ostoskori!</a></div>
       </div>
     </nav>
   )
