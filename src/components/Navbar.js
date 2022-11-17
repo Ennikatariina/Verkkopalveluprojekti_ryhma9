@@ -1,4 +1,5 @@
 import React from 'react'
+import shopping from '../images/shopping_basket.png'
 
 export default function Navbar() {
   return (
@@ -27,11 +28,15 @@ export default function Navbar() {
               </li>
           </ul>
         </div>
-        <div class="nav-right">
+        <div className="nav-right">
             <a href="#" className="nav-link link-dark px-2">Kirjaudu</a> </div>
             <div className="nav-right">
             <a href="#" className="nav-link link-dark px-2">Rekisteröidy</a></div>
-            <div className="nav-right"><a href="#" className="nav-link link-dark px-2">Ostoskori!</a></div>
+            <div className="containernav-right">
+    <a class="nav-right mx-3" href="#">
+      <img src={shopping} alt="" width="40" height="auto"></img>
+    </a>
+  </div>
       </div>
     </nav>
   )
