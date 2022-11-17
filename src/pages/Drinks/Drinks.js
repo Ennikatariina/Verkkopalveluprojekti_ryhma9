@@ -1,4 +1,5 @@
 import React from 'react'
+import './styledrinks.css'
 
 export default function Drinks() {
   return (
