@@ -1,5 +1,6 @@
 import React from 'react'
 import picture1 from '../../images/tarjoiluehdotus.jpg'
+import './home.css'
 
 export default function Home() {
   return (
@@ -10,106 +11,69 @@ export default function Home() {
         <h2>kahvilan ajatus</h2>
       </div>
 
-/*Kortti 1*/ 
-/*Tällä kortit saa: https://codepen.io/duness/pen/vezOYW */
-<div className="card mb-3 container">
-  <div className="row g-0">
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-    <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Kahvit</h5>
-        <p className="card-text">Uskomattomat kahvit....</p>
+      <div className='vgr-cards'>
+      <div className="card mb-3 container">
+        <div className="row g-0">
+          <div className="col-md-6 card-img-body">
+            <img src={picture1} className="img-fluid card-img" alt="kuva" />
+          </div>
+          <div className="col-md-6">
+            <div className="card-body">
+              <h5 className="card-title">Kahvit</h5>
+              <p className="card-text">Uskomattomat kahvit Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus ante, finibus sit amet faucibus quis, consectetur eu mauris. Suspendisse tempor magna tortor, tempus egestas leo tempor et. </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div className="card mb-3 container">
-  <div className="row g-0">
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-    <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Kahvit</h5>
-        <p className="card-text">Uskomattomat kahvit....</p>
+      <div className="card mb-3 container">
+        <div className="row g-0">
+          <div className="col-md-6 card-img-body">
+            <img src={picture1} className="img-fluid card-img" alt="kuva" />
+          </div>
+          <div className="col-md-6">
+            <div className="card-body">
+              <h5 className="card-title">Teet</h5>
+              <p className="card-text">Aistikkaat teet Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus ante, finibus sit amet faucibus quis, consectetur eu mauris. Suspendisse tempor magna tortor, tempus egestas leo tempor et. </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div className="card mb-3 container">
-  <div className="row g-0">
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-    <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Kahvit</h5>
-        <p className="card-text">Uskomattomat kahvit....</p>
+      <div className="card mb-3 container">
+        <div className="row g-0">
+          <div className="col-md-6 card-img-body">
+            <img src={picture1} className="img-fluid card-img" alt="kuva" />
+          </div>
+          <div className="col-md-6">
+            <div className="card-body">
+              <h5 className="card-title">Makeat leivokset</h5>
+              <p className="card-text">Maistuvat maukkaat leivokset Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus ante, finibus sit amet faucibus quis, consectetur eu mauris. Suspendisse tempor magna tortor, tempus egestas leo tempor et. </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div className="card mb-3 container">
-  <div className="row g-0">
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-    <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Kahvit</h5>
-        <p className="card-text">Uskomattomat kahvit....</p>
+      <div className="card mb-3 container">
+        <div className="row g-0">
+          <div className="col-md-6 card-img-body">
+            <img src={picture1} className="img-fluid card-img" alt="kuva" />
+          </div>
+          <div className="col-md-6">
+            <div className="card-body">
+              <h5 className="card-title">Suolaiset </h5>
+              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus ante, finibus sit amet faucibus quis, consectetur eu mauris. Suspendisse tempor magna tortor, tempus egestas leo tempor et. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id='logbackground'>
+        <p>Kirjaudu ja tilaa kohta tähän </p>
+        <br/>
       </div>
     </div>
-  </div>
-</div>
-/*Kortti 2 */
-<div className="card mb-3 container">
-  <div className="row g-0">
-  <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Teet</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-  </div>
-</div>
 
-/*Kortti 3 */
-<div className="card mb-3 container">
-  <div className="row g-0">
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-    <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Makeat herkut</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-/*Kortti 4 */
-<div className="card mb-3 container">
-  <div className="row g-0">
-  <div className="col-md-6">
-      <div className="card-body">
-        <h5 className="card-title">Suolat herkut</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div className="col-md-6">
-    <img src={picture1} className="img-fluid" alt="kuva"/> 
-    </div>
-  </div>
-</div>
-    </div>
+
   )
 }
