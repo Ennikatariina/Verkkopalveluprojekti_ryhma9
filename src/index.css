@@ -32,7 +32,3 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
   font-family: 'Pacifico', cursive;
   font-size: 25px;
 }
-
-.navbar-right{
-  float: right;
-}

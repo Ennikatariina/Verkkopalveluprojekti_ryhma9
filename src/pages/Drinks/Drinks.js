@@ -1,5 +1,5 @@
 import React from 'react'
-import picture2 from '../../images/kahvia.jpg'
+import './styledrinks.css'
 
 export default function Drinks() {
   return (

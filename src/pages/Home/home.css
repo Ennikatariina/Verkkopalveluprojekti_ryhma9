@@ -1,0 +1,58 @@
+#homepageheader{
+    background-color:antiquewhite;
+  }
+  #logbackground{
+    background-color:antiquewhite;
+  }
+  
+  .card{
+    border: none;
+  }
+
+  .vgr-cards .card{
+    display: flex;
+    flex-flow: wrap;
+    flex: 100%;
+    margin-bottom: 40px;
+  }
+  .vgr-cards .card:nth-child(even) .card-img-body {
+    order: 2;
+  }
+  .vgr-cards .card:nth-child(even) .card-body {
+    padding-left: 0;
+    padding-right: 1.25rem;
+  }
+  .card-body{
+    text-align: center;
+    padding: 20%;
+  }
+  .card-title{
+    font-family: 'Pacifico', cursive;
+    font-size:x-large;
+  }
+.card-img{
+  width: 90%;
+  height: 90%;
+  display:block;
+  margin:auto;
+
+
+}
+
+  @media (max-width: 770px) {
+    .vgr-cards .card {
+      display: block;
+      width: 100%;
+    }
+    .card-img-body {
+      order: 1;
+      width: 100%;
+    }
+    .card-img{
+      width: 100%;
+      height: 100%;
+    }
+    
+  }
+ 
+  
