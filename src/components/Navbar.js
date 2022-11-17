@@ -1,9 +1,10 @@
 import React from 'react'
 import shopping from '../images/shopping_basket.png'
+import "../index.css"
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">Sumppi</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +31,8 @@ export default function Navbar() {
         </div>
         <div className="nav-right">
             <a href="#" className="nav-link link-dark px-2">Kirjaudu</a> </div>
-            <div className="nav-right">
-            <a href="#" className="nav-link link-dark px-2">Rekisteröidy</a></div>
             <div className="containernav-right">
-    <a class="nav-right mx-3" href="#">
+    <a className="nav-right mx-3" href="#">
       <img src={shopping} alt="" width="40" height="auto"></img>
     </a>
   </div>
