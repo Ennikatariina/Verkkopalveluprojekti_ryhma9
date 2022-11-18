@@ -16,10 +16,10 @@ export default function Navbar() {
               <a className="nav-link active" aria-current="page" href="#">Etusivu</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Tiskin takana</a>
+              <a className="nav-link active" href="#">Tiskin takana</a>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Tuotteet
               </a>
               <ul className="dropdown-menu">
