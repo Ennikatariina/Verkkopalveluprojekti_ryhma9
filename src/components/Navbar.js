@@ -26,23 +26,23 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="#">Juotavat</a></li>
                 <li><a className="dropdown-item" href="#">Syötävät</a></li>
               </ul>
-              </li>
+            </li>
           </ul>
           <div className="nav-right ms-3">
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Tuotteen nimi" aria-label="Search"></input>
-      <button class="btn btn-dark" type="submit">Löydä!</button>
-    </form>
-  </div>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Tuotteen nimi" aria-label="Search"></input>
+              <button class="btn btn-dark" type="submit">Löydä!</button>
+            </form>
+          </div>
         </div>
         <div className="nav-right">
-            <a href="#" className="nav-link active">Kirjaudu</a> 
-            </div>
-            <div className="containernav-right">
-    <a className="nav-right mx-3" href="#">
-      <img src={shopping} alt="" width="40" height="auto"></img>
-    </a>
-  </div>
+          <a href="#" className="nav-link active">Kirjaudu</a>
+        </div>
+        <div className="containernav-right">
+          <a className="nav-right mx-3" href="#">
+            <img src={shopping} alt="" width="40" height="auto"></img>
+          </a>
+        </div>
       </div>
     </nav>
   )
