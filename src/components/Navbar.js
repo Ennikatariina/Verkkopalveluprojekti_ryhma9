@@ -29,9 +29,9 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="nav-right ms-3">
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Tuotteen nimi" aria-label="Search"></input>
-              <button class="btn btn-dark" type="submit">Löydä!</button>
+            <form className="d-flex">
+              <input className="form-control me-2" type="search" placeholder="Tuotteen nimi" aria-label="Search"></input>
+              <button className="btn btn-dark" type="submit">Löydä!</button>
             </form>
           </div>
         </div>
