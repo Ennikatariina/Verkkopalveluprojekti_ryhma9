@@ -42,5 +42,14 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
 
 #navbarNavDropdown {
   font-size: 18px;
+}
 
+.nav-right{
+  font-size: 18px;
+
+}
+
+li:hover{
+  background-color: #dfcdc0;
+  border-radius: 5px;
 }
