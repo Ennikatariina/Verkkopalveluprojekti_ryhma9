@@ -27,8 +27,13 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
  
 }
 
+.lead{ /**Tällä voi muokata headerissa, otsikon alla olevaa tekstiä "maku,joka muistetaan"*/
+  font-size: 25px;
+}
+
 .display-4 {  /**tällä voi säätää headerissa(main) otsikon kokoa*/
-  font-size: 90px;
+  font-size: 100px;
+  padding-bottom: 30px;
 }
 
 .navbar-brand { /**tällä voi säätää navbarin Sumppia*/
