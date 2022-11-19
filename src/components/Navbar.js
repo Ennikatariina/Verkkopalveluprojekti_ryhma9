@@ -12,9 +12,9 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item">
+           {/* <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">Etusivu</a>
-            </li>
+            </li>*/}
             <li className="nav-item">
               <a className="nav-link active" href="#">Tiskin takana</a>
             </li>
