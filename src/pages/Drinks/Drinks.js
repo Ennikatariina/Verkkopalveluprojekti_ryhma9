@@ -27,6 +27,7 @@ export default function Drinks() {
                 <p className="mb-0">
                   In perspiciatis nisi dicta, aperiam magnam eaque laborum iste.
                 </p>
+                <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit">Lisää ostoskoriin</button>
               </div>
             </div>
           </div>
@@ -53,6 +54,7 @@ export default function Drinks() {
                 <p className="mb-0">
                   In perspiciatis nisi dicta, aperiam magnam eaque laborum iste.
                 </p>
+                <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit">Lisää ostoskoriin</button>
               </div>
             </div>
           </div>
@@ -166,6 +168,7 @@ export default function Drinks() {
                 <p className="mb-0">
                   In perspiciatis nisi dicta, aperiam magnam eaque laborum iste.
                 </p>
+                <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit">Lisää ostoskoriin</button>
               </div>
             </div>
           </div>
@@ -192,6 +195,7 @@ export default function Drinks() {
                 <p className="mb-0">
                   In perspiciatis nisi dicta, aperiam magnam eaque laborum iste.
                 </p>
+                <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit">Lisää ostoskoriin</button>
               </div>
             </div>
           </div>
