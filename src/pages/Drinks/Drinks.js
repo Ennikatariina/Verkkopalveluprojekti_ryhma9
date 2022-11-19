@@ -2,11 +2,9 @@ import React from 'react'
 import './styledrinks.css'
 import picture2 from '../../images/kahvia.jpg'
 
-
 export default function Drinks() {
   return (
     <div>
-       
     <div className="container-fluid">
      <div className="row-mx-5 mt-4">
       
