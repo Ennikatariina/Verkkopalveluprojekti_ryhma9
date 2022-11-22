@@ -1,0 +1,19 @@
+.h5 {
+    font-style: italic;
+}
+
+.card-body{
+    text-align: left;
+    padding: 0;
+}
+
+.h2-text{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.card{
+    padding-bottom: 35px;
+}

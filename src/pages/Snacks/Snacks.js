@@ -1,5 +1,6 @@
 import React from 'react'
 import './stylesnacks.css'
+import picture2 from '../../images/kahvia.jpg'
 
 export default function Snacks() {
   return (
@@ -7,7 +8,7 @@ export default function Snacks() {
     <div>
        
     
-    <div className='h2-text'>Kahvit</div>
+    <div className='h2-text'>Suolaiset</div>
       <div className="container-lg">
         <div className="row mx-5 mt-4">
               
@@ -148,7 +149,7 @@ export default function Snacks() {
         </div>
       </div>
   
-    <div className='h2-text'>Teet ja muut kuumat juomat</div>
+    <div className='h2-text'>Makeat</div>
       <div className="container-lg">
         <div className="row mx-5 mt-4">
               
