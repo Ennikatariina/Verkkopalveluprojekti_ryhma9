@@ -14,11 +14,11 @@ export default function Login() {
               <form className="">
                 <div className="form-floating mb-3">
                   <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required="required"></input>
-                  <label for="floatingInput">Sähköpostiosoite</label>
+                  <label htmlFor="floatingInput">Sähköpostiosoite</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password" required="required"></input>
-                  <label for="floatingPassword">Salasana</label>
+                  <label htmlFor="floatingPassword">Salasana</label>
                 </div>
                 <p className="form-row">
                 <label className="form_label form_label-for-checkbox form-login_rememberme">
