@@ -8,7 +8,7 @@ export default function Form() {
           <div className="modal-content rounded-4 shadow">
             <div className="modal-header p-5 pb-4 border-bottom-0">
               <h1 className="fw-bold mb-0 fs-2">Yhteydenottolomake</h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> {/** Tämä on sulkeva X (rasti)  */}
             </div>
           
     
