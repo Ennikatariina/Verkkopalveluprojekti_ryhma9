@@ -41,6 +41,7 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
   font-size: 30px;
 }
 
+/**navbar säädöt*/
 .navbar{ 
   background-color: #f1995a;
   height: 80px;
