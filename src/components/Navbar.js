@@ -17,7 +17,7 @@ export default function Navbar() {
               <Link className="nav-link active" aria-current="page" to="/">Etusivu</Link>
                 </li>*/}
             <li className="nav-item">
-              <a className="nav-link active" href="#">Tiskin takana</a>
+              <Link className="nav-link active" to="/madeby">Made By</Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link activedropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

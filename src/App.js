@@ -9,6 +9,7 @@ import Snacks from './pages/Snacks/Snacks';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
+import MadeBy from './pages/MadeBy/MadeBy';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
+            <Route path="/madeby" element={<MadeBy/>} />
         </Routes>
     </div>
     <Footer/>
