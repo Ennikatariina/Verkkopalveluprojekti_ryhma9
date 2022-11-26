@@ -27,6 +27,7 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
+            <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
         </Routes>
     </div>
