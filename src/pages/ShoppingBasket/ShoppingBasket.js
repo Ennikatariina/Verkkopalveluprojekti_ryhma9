@@ -2,7 +2,6 @@ import React from "react";
 
 export default function ShoppingBasket() {
     return(
-
         <div className="h-100 h-custom" style="background-color: #d2c9ff;">
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
