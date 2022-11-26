@@ -10,6 +10,7 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
+import MadeBy from './pages/MadeBy/MadeBy';
 
 
 
@@ -26,7 +27,7 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
-            <Route path="/shoppingbasket" element={<ShoppingBasket/>}/>
+            <Route path="/madeby" element={<MadeBy/>} />
         </Routes>
     </div>
     <Footer/>
