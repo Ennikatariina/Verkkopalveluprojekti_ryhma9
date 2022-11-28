@@ -96,7 +96,7 @@ export default function ShoppingBasket() {
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                       <button className="btn btn-link px-2"
-                        onclick=""> {/*this.parentNode.querySelector('input[type=number]').stepDown()*/}
+                        onClick={}>
                         <i className="fas fa-minus"></i>
                       </button>
 
@@ -104,7 +104,7 @@ export default function ShoppingBasket() {
                         className="form-control form-control-sm" />
 
                       <button className="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        onClick={}>
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
