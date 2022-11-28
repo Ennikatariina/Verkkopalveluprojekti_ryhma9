@@ -1,9 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import shopping from '../images/shopping_basket.png'
 import "../index.css"
+import axios from 'axios'
 
-export default function Navbar() {
+export default function Navbar({url}) {
+
+  const [categories, setCategories]=useState([]);
+
+  useEffect(() =>{
+    console.log(url);
+    axios.get(url+ '/products/getcategories.php')
+      .then((response)=>{
+        const json=response.data;
+        setCategories(json);
+      }).catch(error=>{
+        alert(error.response===undefined ?error:error.response.data.error)
+      })
+  },[])
+  
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -19,13 +35,28 @@ export default function Navbar() {
             <li className="nav-item">
               <Link className="nav-link active" to="/madeby">Made By</Link>
             </li>
-            <li className="nav-item dropdown">
+             {/**<li className="nav-item dropdown">
               <a className="nav-link activedropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Tuotteet
               </a>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to="/drinks">Juotavat</Link></li>
                 <li><Link className="dropdown-item" to="/snacks">Syötävät</Link></li>
+              </ul>
+              </li>**/}
+            <li className="nav-item dropdown">
+              <a className="nav-link activedropdown-toggle" href="#" id="dropdown01"  data-bs-toggle="dropdown" aria-expanded="false">
+                Tuotteet
+              </a>  
+              <ul className='dropdown-menu' aria-labelledby='dropdown01'>
+                {categories.map(category =>(
+                  <li key={category.tuoteryhmanro}>
+                    <Link
+                      className='dropdown-item'
+                      to={'/products/'+ category.tuoteryhmanro}>{category.tuoteryhmanimi}
+                      </Link>
+                  </li> 
+                ))}
               </ul>
             </li>
           </ul>

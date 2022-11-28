@@ -12,12 +12,12 @@ import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 
-
+const URL ="http://localhost/verkkokauppa_backend"
 
 function App() {
   return (
     <>
-    <Navbar />
+    <Navbar url={URL}/>
     <Header />
     <div>
         <Routes>
