@@ -9,6 +9,7 @@
     border: none;
   }
 
+
   .vgr-cards .card{
     display: flex;
     flex-flow: wrap;
@@ -22,7 +23,7 @@
     padding-left: 0;
     padding-right: 1.25rem;
   }
-  .card-body{
+  .card-body.tekstikeskelle{
     text-align: center;
     padding: 20%;
   }
