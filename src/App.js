@@ -11,12 +11,26 @@ import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
+import DocumentMeta from 'react-document-meta';
+
+const meta = {
+  title: 'Some Meta Title',
+  description: 'I am a description, and I can create multiple tags',
+  canonical: 'http://example.com/path/to/page',
+  meta: {
+      charset: 'utf-8',
+      name: {
+          keywords: 'react,meta,document,html,tags'
+      }
+  }
+}
 
 const URL ="http://localhost/verkkokauppa_backend"
 
 function App() {
   return (
     <>
+    <DocumentMeta {...meta} />
     <Navbar url={URL}/>
     <Header />
     <div>

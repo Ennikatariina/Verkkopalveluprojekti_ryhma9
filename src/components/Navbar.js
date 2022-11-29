@@ -51,10 +51,10 @@ export default function Navbar({url}) {
               <ul className='dropdown-menu' aria-labelledby='dropdown01'>
                 {categories.map(category =>(
                   <li key={category.tuoteryhmanro}>
-                    <Link
+                    {<Link
                       className='dropdown-item'
                       to={'/products/'+ category.tuoteryhmanro}>{category.tuoteryhmanimi}
-                      </Link>
+                      </Link>}
                   </li> 
                 ))}
               </ul>
