@@ -11,6 +11,7 @@ import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
+//import Products from './pages/Products/Products'; //tuleeko tätä vai ei?
 
 const URL ="http://localhost/verkkokauppa_backend"
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/form" element={<Form/>} />
             <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
+            
         </Routes>
     </div>
     <Footer/>
