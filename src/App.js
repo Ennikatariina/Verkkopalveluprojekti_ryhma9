@@ -12,6 +12,7 @@ import Form from './pages/Form/Form';
 import ShoppingBasket from './components/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
+import Products from './pages/Products/Products';
 import { useState } from 'react';
 
 const meta = {
@@ -25,6 +26,7 @@ const meta = {
       }
   }
 }
+
 
 const URL ="http://localhost/verkkokauppa_backend"
 
@@ -48,6 +50,8 @@ function App() {
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
             <Route path="/madeby" element={<MadeBy/>} />
+            <Route path='/products' element={<Products/>} />
+            
         </Routes>
     </div>
     <Footer/>
