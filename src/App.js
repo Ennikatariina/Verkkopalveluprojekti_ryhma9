@@ -1,6 +1,6 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom'
-import Footer from './components/Footer'
+import {Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -9,7 +9,6 @@ import Snacks from './pages/Snacks/Snacks';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
-import ShoppingBasket from './components/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
@@ -34,6 +33,13 @@ function App() {
 
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
+
+  //Lisää tavaroita osotoskoriin
+    function addtoShoppingbasket(product) {
+    const newShoppingbasket = [...shoppingbasket,product];
+    setShoppingbasket(newShoppingbasket);
+    localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
+  }
 
 
   return (
