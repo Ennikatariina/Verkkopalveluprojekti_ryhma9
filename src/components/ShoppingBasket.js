@@ -11,3 +11,5 @@ export default function ShoppingBasket({shoppingbasket} ){
         </Link>
     )
 }
+
+//<span style>{shoppingbasket.length}</span>
