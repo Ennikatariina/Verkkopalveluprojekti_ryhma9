@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
     return (
@@ -29,7 +30,8 @@ export default function Login() {
                 </p>
               </form>
               <div className="modal-divider"></div>
-                <a href="#" className="nav-link link-dark px-2">Uusi käyttäjä? Rekisteröidy</a> 
+              <Link className="nav-link active link-dark px-2" to="/Signup">Uusi käyttäjä? Rekisteröidy</Link>
+                {/**<a href="#" className="nav-link link-dark px-2">Uusi käyttäjä? Rekisteröidy</a> */}
                 <a href="#" className="nav-link link-dark px-2">Unohtuiko salasana?</a>
               <small className="text-muted">Rekisteröitymällä sitoudut käyttöehtoihin</small>
             </div>
