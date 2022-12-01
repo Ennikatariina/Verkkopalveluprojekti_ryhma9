@@ -11,7 +11,7 @@ import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
-//import Products from './pages/Products/Products'; //tuleeko tätä vai ei?
+
 
 const URL ="http://localhost/verkkokauppa_backend"
 
