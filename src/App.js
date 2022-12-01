@@ -9,9 +9,10 @@ import Snacks from './pages/Snacks/Snacks';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
-import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
+import ShoppingBasket from './components/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
+import { useState } from 'react';
 
 const meta = {
   title: 'Some Meta Title',
@@ -28,6 +29,11 @@ const meta = {
 const URL ="http://localhost/verkkokauppa_backend"
 
 function App() {
+
+  //ostoskorin tilamuuttuja
+  const [shoppingbasket, setShoppingbasket] = useState([]);
+
+
   return (
     <>
     <DocumentMeta {...meta} />
@@ -41,7 +47,6 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
-            <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
         </Routes>
     </div>
@@ -49,5 +54,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;
