@@ -12,6 +12,7 @@ import Form from './pages/Form/Form';
 import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
+import Products from './pages/Products/Products';
 
 const meta = {
   title: 'Some Meta Title',
@@ -44,6 +45,7 @@ function App() {
             <Route path="/form" element={<Form/>} />
             <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
+            <Route path='/products' element={<Products/>} />
             
         </Routes>
     </div>
