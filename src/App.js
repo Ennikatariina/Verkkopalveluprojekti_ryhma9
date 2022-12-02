@@ -1,6 +1,6 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom'
-import Footer from './components/Footer'
+import {Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -9,10 +9,10 @@ import Snacks from './pages/Snacks/Snacks';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Form from './pages/Form/Form';
-import ShoppingBasket from './pages/ShoppingBasket/ShoppingBasket';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
+import { useState } from 'react';
 
 const meta = {
   title: 'Some Meta Title',
@@ -30,6 +30,18 @@ const meta = {
 const URL ="http://localhost/verkkokauppa_backend"
 
 function App() {
+
+  //ostoskorin tilamuuttuja
+  const [shoppingbasket, setShoppingbasket] = useState([]);
+
+  //Lisää tavaroita osotoskoriin
+    function addtoShoppingbasket(product) {
+    const newShoppingbasket = [...shoppingbasket,product];
+    setShoppingbasket(newShoppingbasket);
+    localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
+  }
+
+
   return (
     <>
     <DocumentMeta {...meta} />
@@ -43,7 +55,6 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
-            <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL}/>} />
             
@@ -53,5 +64,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;

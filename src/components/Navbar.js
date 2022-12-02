@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import shopping from '../images/shopping_basket.png'
 import "../index.css"
 import axios from 'axios'
+import ShoppingBasket from '../components/ShoppingBasket'
 
 export default function Navbar({url}) {
 
@@ -68,12 +68,11 @@ export default function Navbar({url}) {
           </div>
         </div>
         <div className="nav-right">
-          <a href="#" className="nav-link active">Kirjaudu</a>
+        <Link className="nav-link active" to="/Login">Kirjaudu</Link>
+         { /**<a href="#" className="nav-link active">Kirjaudu</a>**/}
         </div>
-        <div className="containernav-right">
-          <a className="nav-right mx-3" href="#">
-            <img src={shopping} alt="" width="40" height="auto"></img>
-          </a>
+        <div className="containernav-right" class ="mx-3">
+                      <ShoppingBasket shoppingbasket={ShoppingBasket} />
         </div>
       </div>
     </nav>
