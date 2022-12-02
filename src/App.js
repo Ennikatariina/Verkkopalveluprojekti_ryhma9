@@ -45,7 +45,7 @@ function App() {
             <Route path="/form" element={<Form/>} />
             <Route path="/shoppingbasket" element={<ShoppingBasket/>} />
             <Route path="/madeby" element={<MadeBy/>} />
-            <Route path='/products' element={<Products/>} />
+            <Route path="/products/:tuoteryhmanro" element={<Products url={URL}/>} />
             
         </Routes>
     </div>
