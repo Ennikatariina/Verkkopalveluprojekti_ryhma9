@@ -11,6 +11,7 @@ export default function Signup() {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
       
+      
             <div className="modal-body p-5 pt-0">
               <form className="">
                 <div className="form-floating mb-3">
@@ -20,7 +21,7 @@ export default function Signup() {
                 <div className="form-floating mb-3">
                   <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="lname" required="required"></input>
                   <label htmlFor="floatinglname">Sukunimi</label>
-                </div>
+                </div> 
                 <div className="form-floating mb-3">
                   <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required="required"></input>
                   <label htmlFor="floatingInput">Sähköpostiosoite</label>
