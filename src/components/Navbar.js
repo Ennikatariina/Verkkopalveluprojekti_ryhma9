@@ -68,7 +68,8 @@ export default function Navbar({url}) {
           </div>
         </div>
         <div className="nav-right">
-          <a href="#" className="nav-link active">Kirjaudu</a>
+        <Link className="nav-link active" to="/Login">Kirjaudu</Link>
+         { /**<a href="#" className="nav-link active">Kirjaudu</a>**/}
         </div>
         <div className="containernav-right" class ="mx-3">
                       <ShoppingBasket shoppingbasket={ShoppingBasket} />
