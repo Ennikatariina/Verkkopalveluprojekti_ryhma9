@@ -45,7 +45,7 @@ function App() {
   return (
     <>
     <DocumentMeta {...meta} />
-    <Navbar url={URL}/>
+    <Navbar url={URL} shoppingbasket={shoppingbasket}/>
     <Header />
     <div>
         <Routes>
