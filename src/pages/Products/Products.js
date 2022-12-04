@@ -28,7 +28,7 @@ export default function Products({url}) {
          <h3> {category} </h3> {/**{category} otsikon sisällä eli näkyy tuoteryhmän nimi */}
          {products.map(product => (
             <div key={product.tuotenro}>
-               {product.tuotenimi}
+               {product.tuotenimi} {product.hinta} {/**Testi, että hinnan ja muita tietoja voi lisätä tähän perään */}
                </div>
          ))}
          </div>
