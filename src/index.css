@@ -53,10 +53,19 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
 
 .nav-right{
   font-size: 18px;
-
+  list-style-type: none;
 }
 
 li:hover{
   background-color: #dfcdc0;
   border-radius: 5px;
 }
+.dropdown-width{
+   width: 500px !important;
+   }
+
+.modal-dialog {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  
+  }
