@@ -41,7 +41,7 @@ CREATE TABLE `tuote` (
 --
 
 INSERT INTO `tuote` (`tuotenro`, `tuotenimi`, `kuvaus`, `kuvannimi`, `hinta`, `tuoteryhmanro`) VALUES
-(1, 'Kahvi', 'Kahvi, johon valita makusi mukaan maidon ja sokerin tai molemmat.', 'tuote_kahvi.jpg', '2.50', 1),
+(1, 'Kahvi', 'Kahvi, johon voit valita makusi mukaan maidon ja sokerin tai molemmat.', 'tuote_kahvi.jpg', '2.50', 1),
 (2, 'Cappuccino', 'Espressokahvi, johon on lisätty kuumaa maitoa ja maitovaahtoa.', 'tuote_capuccino.jpg', '3.50', 1),
 (3, 'Caffe Latte', 'Kahvijuoma, joka sisältää 1/3 espressoa ja 3/4 vaahdotettua maitoa.', 'tuote_caffelatte.jpg', '4.00', 1),
 (4, 'Espresso', 'Vahva sokerilla maustettu kahvijuoma.', 'tuote_espresso.jpg', '3.50', 1),
@@ -50,8 +50,8 @@ INSERT INTO `tuote` (`tuotenro`, `tuotenimi`, `kuvaus`, `kuvannimi`, `hinta`, `t
 (7, 'Juustoleipä', 'Herkullinen kahdella juustolla ja sesongin vihanneksilla/hedelmillä täytetty leipä.', 'tuote_juustoleipa.jpg', '5.00', 4),
 (8, 'Croissant', 'Tuore croissant valitsemillasi täytteillä.', 'tuote_croissant.jpg', '5.50', 4),
 (9, 'Kinkkupiiras', 'Maistuva palanen kinkkupiirakkaa.', 'tuote_kinkkupiirakka.jpg', '5.00', 4),
-(10, 'Macchiato', 'Kahvi, jonka pohjana espresso sekä lisänä pinei määrä vaahdotettua maitoa.', 'tuote_macchiato.jpg', '4.50', 1),
-(11, 'Mansikkalaivos', 'Makea mansikkaleivos.', 'tuote_mansikkaleivos.jpg', '5.50', 3),
+(10, 'Macchiato', 'Kahvi, jonka pohjana espresso sekä lisänä pieni määrä vaahdotettua maitoa.', 'tuote_macchiato.jpg', '4.50', 1),
+(11, 'Mansikkaleivos', 'Makea mansikkaleivos.', 'tuote_mansikkaleivos.jpg', '5.50', 3),
 (12, 'Mustikkamuffini', 'Tuoreista mustikoista leivottu muffinini.', 'tuote_mustikkamuffini.jpg', '4.50', 3),
 (13, 'Mutakakku', 'Suklainen mutakakku kermavaahdolla.', 'tuote_mutakakku.jpg', '5.00', 3),
 (14, 'Omenapiirakka', 'Lämmin palanen omenapiirakkaa.', 'tuote_omenapiirakka.jpg', '4.00', 3),
