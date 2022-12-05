@@ -12,7 +12,8 @@ import Form from './pages/Form/Form';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
-import { useState } from 'react';
+import Order from "./pages/Order/Order";
+import { useEffect, useState } from 'react';
 
 
 const meta = {
@@ -35,8 +36,15 @@ function App() {
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
 
+  //lukee localstoragesta ostoskorin tiedot mikäli selain refreshataan tai suljetaan
+  useEffect(() => {
+    if ("shoppingbasket" in localStorage) {
+      setShoppingbasket(JSON.parse(localStorage.getItem("shoppingbasket")));
+    }
+  }, [])
+
   //Lisää tavaroita osotoskoriin
-    function addtoShoppingbasket(product) {
+    function addToShoppingbasket(product) {
     const newShoppingbasket = [...shoppingbasket,product];
     setShoppingbasket(newShoppingbasket);
     localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
@@ -57,8 +65,8 @@ function App() {
             <Route path="/signup" element={<Signup/>} />
             <Route path="/form" element={<Form/>} />
             <Route path="/madeby" element={<MadeBy/>} />
-            <Route path="/products/:tuoteryhmanro" element={<Products url={URL}/>} />
-          
+            <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
+            <Route path="/order" element={<Order shoppingbasket={shoppingbasket} />} />
             
         </Routes>
     </div>

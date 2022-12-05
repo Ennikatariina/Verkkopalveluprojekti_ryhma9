@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductCard from '../../components/ProductCard/ProductCard';
 
-export default function Products({url}) {
+export default function Products({url, addToShoppingbasket}) {
    const[category,setCategoryName] = useState('');
    const [products, setProducts] = useState([]); //lista tuotteista
 
@@ -31,6 +31,7 @@ export default function Products({url}) {
             <div className="row mx-5 mt-4">
          {products.map(product => (
             <ProductCard param={product} />
+            //<button className="btn btn-primary" type="button" onclick={e => addToShoppingbasket(product)}>Add</button>
             
          )
          )} 

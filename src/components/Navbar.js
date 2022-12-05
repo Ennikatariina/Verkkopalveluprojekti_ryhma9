@@ -5,7 +5,7 @@ import axios from 'axios'
 import ShoppingBasket from '../components/ShoppingBasket'
 import Login from '../pages/Login/Login'
 
-export default function Navbar({url}) {
+export default function Navbar({url, shoppingbasket}) {
 
   const [categories, setCategories]=useState([]);
   const [search, setSearch] = useState([]);
@@ -102,7 +102,7 @@ function executeSearch(e){
          { /**<a href="#" className="nav-link active">Kirjaudu</a>**/}
         </div>
         <div className="containernav-right" class ="mx-3">
-                      <ShoppingBasket shoppingbasket={ShoppingBasket} />
+                      <ShoppingBasket shoppingbasket={shoppingbasket} />
         </div>
       </div>
     </nav>
