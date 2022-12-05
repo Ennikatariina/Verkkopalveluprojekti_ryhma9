@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 export default function Products({url}) {
    const[category,setCategoryName] = useState('');
@@ -26,11 +27,14 @@ export default function Products({url}) {
    return (
        <div>
          <h3> {category} </h3> {/**{category} otsikon sisällä eli näkyy tuoteryhmän nimi */}
+         <div className="container-lg">
+            <div className="row mx-5 mt-4">
          {products.map(product => (
-            <div key={product.tuotenro}>
-               {product.tuotenimi} {product.hinta} {/**Testi, että hinnan ja muita tietoja voi lisätä tähän perään */}
-               </div>
-         ))}
+            <ProductCard param={product} />
+            
+         )
+         )} 
+        </div> </div>
          </div>
    )
    
