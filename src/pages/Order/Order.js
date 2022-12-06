@@ -10,12 +10,12 @@ export default function Order({shoppingbasket}) {
             <table className="table">
                 <tbody>
                     {shoppingbasket.map(product => {
-                        sum+=parseFloat(product.price);
+                        sum+=parseFloat(product.hinta);
 
                         return (
                             <tr key = {uuid()}>
-                                <td>{product.name}</td>
-                                <td>{product.price}</td>
+                                <td>{product.tuotenimi}</td>
+                                <td>{product.hinta}</td>
                                 <td></td>
                             </tr>
                         )
