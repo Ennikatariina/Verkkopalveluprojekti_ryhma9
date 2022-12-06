@@ -51,6 +51,13 @@ function App() {
     console.log("HEp)")
   }
 
+  //poistaa tuotteita ostoskorista, tällä hetkellä tyhjentää koko ostoskorin, muokkaus niin että poistaa tuotteen kerrallaan
+    function removeFromShoppingbasket(product) {
+      const itemsRemoved =shoppingbasket.filter(item => item.id !== product.id);
+      setShoppingbasket(itemsRemoved);
+      localStorage.setItem("shoppingbasket", JSON.stringify(itemsRemoved));
+    }
+
 
   return (
     <>
@@ -67,7 +74,7 @@ function App() {
             <Route path="/form" element={<Form/>} />
             <Route path="/madeby" element={<MadeBy/>} />
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
-            <Route path="/order" element={<Order shoppingbasket={shoppingbasket} />} />
+            <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} />} />
             
         </Routes>
     </div>
