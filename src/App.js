@@ -48,6 +48,7 @@ function App() {
     const newShoppingbasket = [...shoppingbasket,product];
     setShoppingbasket(newShoppingbasket);
     localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
+    console.log("HEp)")
   }
 
 

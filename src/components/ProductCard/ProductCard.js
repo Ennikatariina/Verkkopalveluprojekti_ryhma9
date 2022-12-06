@@ -2,7 +2,7 @@ import React from "react";
 import picture2 from '../../images/kahvia.jpg'
 import './ProductCard.css'
 
-export default function ProductCard(props, addToShoppingbasket, product){
+export default function ProductCard(props){
 
 
     return(
@@ -22,7 +22,7 @@ export default function ProductCard(props, addToShoppingbasket, product){
               <p className="mb-0">
                 {props.param.kuvaus}
               </p>
-              <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit" onclick={e => addToShoppingbasket(product)}>Lisää ostoskoriin</button>
+              <button className="w-50 mb-2 btn btn-sm rounded-3 btn-primary" type="submit" onClick={e => props.addToShoppingbasket(props.param)}>Lisää ostoskoriin</button>
   
             </div>
           </div>
