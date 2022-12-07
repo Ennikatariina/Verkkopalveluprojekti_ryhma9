@@ -45,15 +45,20 @@ function App() {
 
   //Lisää tavaroita osotoskoriin
     function addToShoppingbasket(product) {
+    if(shoppingbasket.some(item => item.tuotenro === product.tuotenro)) {
+      const existingProduct = shoppingbasket.filter(item => item.tuotenro === product.tuotenro);
+      updateAmount(parseInt(existingProduct[0].amount) +1, product);
+    }
+    product["amount"] = 1; //tuotelisätään ostoskoriin, oletusarvona 1 tuote
     const newShoppingbasket = [...shoppingbasket,product];
     setShoppingbasket(newShoppingbasket);
     localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
     console.log("HEp)")
   }
 
-  //poistaa tuotteita ostoskorista, tällä hetkellä tyhjentää koko ostoskorin, muokkaus niin että poistaa tuotteen kerrallaan
+  //poistaa tuotteita ostoskorista
     function removeFromShoppingbasket(product) {
-      const itemsRemoved =shoppingbasket.filter(item => item.id !== product.id);
+      const itemsRemoved =shoppingbasket.filter(item => item.tuotenro !== product.tuotenro);
       setShoppingbasket(itemsRemoved);
       localStorage.setItem("shoppingbasket", JSON.stringify(itemsRemoved));
     }
@@ -61,24 +66,11 @@ function App() {
   //tuotemäärän muuttaminen ostoskorissa
     function updateAmount(amount, product) {
       product.amount = amount;
-      const index = shoppingbasket.findIndex((item => item.id === product.id));
+      const index = shoppingbasket.findIndex((item => item.tuotenro === product.tuotenro));
       const modifiedShoppingbasket = Object.assign([...shoppingbasket], {[index]:product});
       setShoppingbasket(modifiedShoppingbasket);
       localStorage.setItem("shoppingbasket", JSON.stringify(modifiedShoppingbasket));
 
-  //tuotemäärän lisääminen ostoskoriin
-    function addToShoppingbasket(product) {
-      if (shoppingbasket.some(item => item.id === product.id)){
-        const existingProduct = shoppingbasket.filter(item => item.id === product.id);
-        updateAmount(parseInt(existingProduct[0].amount) +1, product);
-      } 
-      else {
-      product["amount"] = 1;
-      const newShoppingbasket = [...shoppingbasket, product];
-      setShoppingbasket(newShoppingbasket);
-      localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
-          } 
-           }
     }
 
 

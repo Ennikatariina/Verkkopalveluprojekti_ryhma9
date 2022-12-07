@@ -12,13 +12,13 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
         }
         console.log(inputs);
         console.log(shoppingbasket);
-    }, [shoppingbasket.length,inputs])
+    }, [shoppingbasket.length])
 
     useEffect(() => {
         if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
             inputs[inputIndex].current.focus();
         }
-    }, [shoppingbasket, inputs, inputIndex])
+    }, [shoppingbasket])
     
     let sum = 0;
 
