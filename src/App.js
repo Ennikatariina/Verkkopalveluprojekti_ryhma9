@@ -17,7 +17,7 @@ import { useEffect, useState } from 'react';
 
 
 const meta = {
-  title: 'Some Meta Title',
+  title: 'Sumppi',
   description: 'I am a description, and I can create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
