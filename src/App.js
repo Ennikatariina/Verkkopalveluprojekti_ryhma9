@@ -51,6 +51,36 @@ function App() {
     console.log("HEp)")
   }
 
+  //poistaa tuotteita ostoskorista, tällä hetkellä tyhjentää koko ostoskorin, muokkaus niin että poistaa tuotteen kerrallaan
+    function removeFromShoppingbasket(product) {
+      const itemsRemoved =shoppingbasket.filter(item => item.id !== product.id);
+      setShoppingbasket(itemsRemoved);
+      localStorage.setItem("shoppingbasket", JSON.stringify(itemsRemoved));
+    }
+
+  //tuotemäärän muuttaminen ostoskorissa
+    function updateAmount(amount, product) {
+      product.amount = amount;
+      const index = shoppingbasket.findIndex((item => item.id === product.id));
+      const modifiedShoppingbasket = Object.assign([...shoppingbasket], {[index]:product});
+      setShoppingbasket(modifiedShoppingbasket);
+      localStorage.setItem("shoppingbasket", JSON.stringify(modifiedShoppingbasket));
+
+  //tuotemäärän lisääminen ostoskoriin
+    function addToShoppingbasket(product) {
+      if (shoppingbasket.some(item => item.id === product.id)){
+        const existingProduct = shoppingbasket.filter(item => item.id === product.id);
+        updateAmount(parseInt(existingProduct[0].amount) +1, product);
+      } 
+      else {
+      product["amount"] = 1;
+      const newShoppingbasket = [...shoppingbasket, product];
+      setShoppingbasket(newShoppingbasket);
+      localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
+          } 
+           }
+    }
+
 
   return (
     <>
@@ -67,7 +97,7 @@ function App() {
             <Route path="/form" element={<Form/>} />
             <Route path="/madeby" element={<MadeBy/>} />
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
-            <Route path="/order" element={<Order shoppingbasket={shoppingbasket} />} />
+            <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             
         </Routes>
     </div>
