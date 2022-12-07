@@ -101,7 +101,7 @@ function executeSearch(e){
         {/**<Link className="nav-link active" onClick= loginClick>Kirjaudu</Link>
          { /**<a href="#" className="nav-link active">Kirjaudu</a>**/}
         </div>
-        <div className="containernav-right" class ="mx-3">
+        <div className="containernav-right mx-3">
                       <ShoppingBasket shoppingbasket={shoppingbasket} />
         </div>
       </div>

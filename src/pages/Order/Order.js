@@ -10,6 +10,8 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
         for (let i = 0; i<shoppingbasket.length;i++) {
             inputs[i] = React.createRef(); // ongelma tässä kun ei toimi tai lisää tuotteita?
         }
+        console.log(inputs);
+        console.log(shoppingbasket);
     }, [shoppingbasket.length,inputs])
 
     useEffect(() => {
