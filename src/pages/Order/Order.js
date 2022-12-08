@@ -42,7 +42,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                  </thead>
                 <tbody>
                     {shoppingbasket.map((product, index) => {
-                        sum+=parseFloat(product.hinta);
+                        sum+=parseFloat(product.amount + product.hinta); //mistä poimii määrät? näyttää hinnan x3
 
                         return (
                             <tr key = {uuid()}>
