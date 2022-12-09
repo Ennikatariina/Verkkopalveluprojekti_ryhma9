@@ -48,12 +48,14 @@ function App() {
     if(shoppingbasket.some(item => item.tuotenro === product.tuotenro)) {
       const existingProduct = shoppingbasket.filter(item => item.tuotenro === product.tuotenro);
       updateAmount(parseInt(existingProduct[0].amount) +1, product);
+
     }
+    else{
     product["amount"] = 1; //tuotelisätään ostoskoriin, oletusarvona 1 tuote
     const newShoppingbasket = [...shoppingbasket,product];
     setShoppingbasket(newShoppingbasket);
     localStorage.setItem("shoppingbasket", JSON.stringify(newShoppingbasket));
-    console.log("HEp)")
+    }
   }
 
   //poistaa tuotteita ostoskorista

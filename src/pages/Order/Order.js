@@ -10,8 +10,6 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
         for (let i = 0; i<shoppingbasket.length;i++) {
             inputs[i] = React.createRef(); // ongelma tässä kun ei toimi tai lisää tuotteita?
         }
-        console.log(inputs);
-        console.log(shoppingbasket);
     }, [shoppingbasket.length])
 
     useEffect(() => {
@@ -42,14 +40,14 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                  </thead>
                 <tbody>
                     {shoppingbasket.map((product, index) => {
-                        sum+=parseFloat(product.amount + product.hinta); //mistä poimii määrät? näyttää hinnan x3
+                        sum+=parseFloat(product.hinta)*product.amount;
 
                         return (
                             <tr key = {uuid()}>
                                 <td>{product.tuotenimi}</td>
                                 <td>{product.hinta} €</td>
                                 <td>
-                                    <input style={{width: "60px"}} value={product.amount} onChange={e => changeAmount(e,product, index)} />
+                                    <input type = "number" style={{width: "60px"}} value={product.amount} onChange={e => changeAmount(e,product, index)} />
                                     </td>
 
                                 <td><a href="#" onClick={() => removeFromShoppingbasket(product)}>
