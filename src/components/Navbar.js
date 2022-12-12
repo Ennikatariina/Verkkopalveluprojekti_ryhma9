@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import "../index.css"
 import axios from 'axios'
 import ShoppingBasket from '../components/ShoppingBasket'
 import Login from '../pages/Login/Login'
 
+
+
 export default function Navbar({url, shoppingbasket}) {
 
   const [categories, setCategories]=useState([]);
   const [search, setSearch] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() =>{
     console.log(url);
@@ -24,7 +28,7 @@ export default function Navbar({url, shoppingbasket}) {
 function executeSearch(e){
     if (e.charCode ===13){
       e.preventDefault();
-      Navigate('/search/' + search)
+      navigate('/search/' + search);
     }
   }
   
