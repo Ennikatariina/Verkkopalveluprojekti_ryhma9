@@ -23,8 +23,28 @@ export default function Signup() {
                   <label htmlFor="floatinglname">Sukunimi</label>
                 </div> 
                 <div className="form-floating mb-3">
+                  <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="address" required="required"></input>
+                  <label htmlFor="floatinglname">Osoite</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="postinro" required="required"></input>
+                  <label htmlFor="floatinglname">postinumero</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="postipaikka" required="required"></input>
+                  <label htmlFor="floatinglname">Postipaikka</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="puhelinnro" required="required"></input>
+                  <label htmlFor="floatinglname">Puhelinnumero</label>
+                </div>
+                <div className="form-floating mb-3">
                   <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required="required"></input>
                   <label htmlFor="floatingInput">Sähköpostiosoite</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input type="lname" className="form-control rounded-3" id="floatinglname" placeholder="kayttajatunnus" required="required"></input>
+                  <label htmlFor="floatinglname">Käyttäjätunnus</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password" required="required"></input>

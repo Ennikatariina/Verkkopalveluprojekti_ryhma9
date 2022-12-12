@@ -61,11 +61,14 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                     <tr key ={uuid()}>
                         <td className="fw-bold">Loppusumma</td>
                         <td className="fw-bold">{sum.toFixed(2)} €</td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
+
+            <button type="button" className="btn btn-warning btn-lg mt-5 position-relative top-50 start-50 translate-middle">Tilaa tästä!</button>
+        
         </div>
     )
+    //buttoniin linkki joka ohjaa kuittaus-sivulle, tilauksesi on vastaanotettu?
     
 }
