@@ -15,7 +15,7 @@ export default function ProductCard(props){
           <img src={URL + '/imagess/' + props.param.kuvannimi} className="card-img-top productImg" alt="kuva" />
            
            {/*<div className="card-img-top"  alt="tuotekuva">{props.param.kuvannimi} </div>*/}
-              <div className="card-body">
+              <div className="card-body productC">
               <div className="row mb-2">
                 <div className="col">
                   <h5 className="mb-0">{props.param.tuotenimi}</h5>
