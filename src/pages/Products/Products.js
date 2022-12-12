@@ -47,7 +47,7 @@ export default function Products({url, addToShoppingbasket}) {
          <div className="container-lg">
             <div className="row mx-5 mt-4">
          {products.map(product => (
-            <ProductCard param={product} addToShoppingbasket={addToShoppingbasket}/>
+            <ProductCard param={product} addToShoppingbasket={addToShoppingbasket} key={product.tuotenro}/>
             //<button className="btn btn-primary" type="button" onclick={e => addToShoppingbasket(product)}>Add</button>
             
          )

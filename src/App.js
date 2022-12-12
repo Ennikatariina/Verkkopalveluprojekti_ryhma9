@@ -92,7 +92,7 @@ function App() {
             <Route path="/madeby" element={<MadeBy/>} />
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
-            <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
+            <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
 
             
         </Routes>
