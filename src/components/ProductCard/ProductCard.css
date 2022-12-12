@@ -20,6 +20,8 @@
 .productImg {
     width: 300px;
     height: 180px;
+    /*display:block;
+    margin:auto;*/
 } /*kaikki kuvat samaa kokoa*/
 
 .productText{
