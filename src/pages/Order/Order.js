@@ -1,6 +1,7 @@
 import React from "react";
 import uuid from "react-uuid";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Order({shoppingbasket, removeFromShoppingbasket, updateAmount}) {
     const [inputs,_] = useState([]);
@@ -8,7 +9,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
 
     useEffect(() => {
         for (let i = 0; i<shoppingbasket.length;i++) {
-            inputs[i] = React.createRef(); // ongelma tässä kun ei toimi tai lisää tuotteita?
+            inputs[i] = React.createRef();
         }
     }, [shoppingbasket.length])
 
@@ -61,12 +62,14 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                     <tr key ={uuid()}>
                         <td className="fw-bold">Loppusumma</td>
                         <td className="fw-bold">{sum.toFixed(2)} €</td>
+                        <td className ="fw-bold"></td>
+                        <td className ="fw-bold"></td>
                     </tr>
                 </tbody>
             </table>
-
+            <Link to="/thankyou">
             <button type="button" className="btn btn-warning btn-lg mt-5 position-relative top-50 start-50 translate-middle">Tilaa tästä!</button>
-        
+            </Link>
         </div>
     )
     //buttoniin linkki joka ohjaa kuittaus-sivulle, tilauksesi on vastaanotettu?

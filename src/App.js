@@ -13,6 +13,7 @@ import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
+import ThankYou from "./pages/ThankYou/thankyou";
 import { useEffect, useState } from 'react';
 
 
@@ -93,6 +94,7 @@ function App() {
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
+            <Route path="/thankyou" element={<ThankYou/>} />
 
             
         </Routes>
