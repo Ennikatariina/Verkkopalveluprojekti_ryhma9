@@ -1,7 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-export default function Login() {
+const URL ="http://localhost/verkkokauppa_backend"
+export default function Login(props) {
+  const[uname, setUname]=useState("")
+  const[pw, setPw]=useState("")
+
+  function checklogin(){
+    const formData =new FormData();
+    formData.append("kayttajatunnus", uname);
+    formData.append("salasana", pw);
+    
+    axios.post(URL+"/user_login/rest_login.php",formData,{})
+    .then (
+      resp =>{ 
+        
+        console.log(resp.data) 
+        props.setLoggedUser(resp.data)
+  })
+    .catch (e=> console.log(e))
+  }
+
     return (
     <div className="modal modal-signin position-static d-block bg-secondary py-5" tabIndex="-1" role="dialog" id="modalSignin">
         <div className="modal-dialog" role="document">
@@ -14,11 +35,11 @@ export default function Login() {
             <div className="modal-body p-5 pt-0">
               <form className="">
                 <div className="form-floating mb-3">
-                  <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required="required"></input>
-                  <label htmlFor="floatingInput">Sähköpostiosoite</label>
+                  <input type="text" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required="required" value={uname} onChange={e=>setUname(e.target.value)}></input>
+                  <label htmlFor="floatingInput">Käyttäjätunnus</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password" required="required"></input>
+                  <input type="text" className="form-control rounded-3" id="floatingPassword" placeholder="Password" required="required" value={pw} onChange={e=>setPw(e.target.value)}></input>
                   <label htmlFor="floatingPassword">Salasana</label>
                 </div>
                 <p className="form-row">
@@ -26,7 +47,7 @@ export default function Login() {
                   <input id="rememberme" className="form_input form_input-chechbox" name="rememberme" type="checkbox" value="forever"></input>
                   <span>Muista minut</span>
                 </label>
-                <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Kirjaudu sisään</button>
+                <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onClick={checklogin}>Kirjaudu sisään</button>
                 </p>
               </form>
               <div className="modal-divider"></div>

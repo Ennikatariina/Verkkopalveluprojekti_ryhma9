@@ -15,6 +15,7 @@ import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
 import ThankYou from "./pages/ThankYou/thankyou";
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 const meta = {
@@ -33,7 +34,24 @@ const meta = {
 const URL ="http://localhost/verkkokauppa_backend"
 
 function App() {
+  //tilanmuuttuja käyttäjälle
+  const[loggedUser, setLoggedUser] =useState(null);
+  //tämä useEffect katsoo onko käyttäjä kirjautunut.
+  useEffect(()=>{
+    let axiosConfig = {
 
+      headers: { 
+       
+        'Content-Type': 'application/json;charset=UTF-8'
+    
+      }
+    
+    };
+    axios.post(URL+"/user_login/rest_login.php",{},axiosConfig)
+    .then(resp =>setLoggedUser(resp.data))
+    .catch(e=>console.log(e.message))
+  },[])
+//{withCredentials:true}
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
 
@@ -80,7 +98,7 @@ function App() {
   return (
     <>
     <DocumentMeta {...meta} />
-    <Navbar url={URL} shoppingbasket={shoppingbasket}/>
+    <Navbar url={URL} shoppingbasket={shoppingbasket} loggedUser={loggedUser} setLoggedUser={setLoggedUser}/>
     <Header />
     <div>
         <Routes>
