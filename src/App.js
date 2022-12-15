@@ -38,20 +38,19 @@ function App() {
   const[loggedUser, setLoggedUser] =useState(null);
   //tämä useEffect katsoo onko käyttäjä kirjautunut.
   useEffect(()=>{
-    let axiosConfig = {
-
-      headers: { 
-       
-        'Content-Type': 'application/json;charset=UTF-8'
-    
-      }
-    
-    };
-    axios.post(URL+"/user_login/rest_login.php",{},axiosConfig)
+    axios.post(URL+"/user_login/rest_login.php",{},{withCredentials:true})
     .then(resp =>setLoggedUser(resp.data))
-    .catch(e=>console.log(e.message))
+    .catch(e=>console.log(e.message +" session hakeminen ei onnisnut app.js:ssä"))
   },[])
 //{withCredentials:true}
+
+//uloskirjautumiseen funktio
+function logout(){
+  axios.get(URL+"/user_login/rest_logout.php",{withCredentials:true})
+  .then (resp => setLoggedUser(null))
+  .catch(e=>console.log(e.message + "Ulos kirjautumisessa jokin ei onnistunut"));
+}
+
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
 
@@ -61,6 +60,8 @@ function App() {
       setShoppingbasket(JSON.parse(localStorage.getItem("shoppingbasket")));
     }
   }, [])
+
+
 
   //Lisää tavaroita osotoskoriin
     function addToShoppingbasket(product) {
@@ -98,7 +99,7 @@ function App() {
   return (
     <>
     <DocumentMeta {...meta} />
-    <Navbar url={URL} shoppingbasket={shoppingbasket} loggedUser={loggedUser} setLoggedUser={setLoggedUser}/>
+    <Navbar url={URL} shoppingbasket={shoppingbasket} loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
     <Header />
     <div>
         <Routes>
