@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const URL ="http://localhost/verkkokauppa_backend"
+const URL ="http://localhost:3001"
 export default function Login(props) {
   const[uname, setUname]=useState("")
   const[pw, setPw]=useState("")

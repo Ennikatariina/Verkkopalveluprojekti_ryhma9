@@ -31,7 +31,7 @@ const meta = {
 }
 
 
-const URL ="http://localhost/verkkokauppa_backend"
+const URL ="http://localhost:3001"
 
 function App() {
   //tilanmuuttuja käyttäjälle
