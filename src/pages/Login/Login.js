@@ -13,7 +13,7 @@ export default function Login(props) {
     formData.append("kayttajatunnus", uname);
     formData.append("salasana", pw);
     
-    axios.post(URL+"/user_login/rest_login.php",formData,{})
+    axios.post(URL+"/user_login/rest_login.php",formData,{withCredentials:true})
     .then (
       resp =>{ 
         console.log(resp.data+" Heps") 
