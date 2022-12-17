@@ -3,13 +3,15 @@ import picture4 from '../../images/Avatarit/Aikku_avatar.png'
 import picture5 from '../../images/Avatarit/Avatar_Enni.png'
 import picture6 from '../../images/Avatarit/Avatar_JennyK.jpg'
 import picture7 from '../../images/Avatarit/Jonnaavatar.png'
+import './MadeBy.css'
 
 export default function MadeBy() {
     return (
     <div>
+      <div className='otsikkomadeby'>
 <h1>Made By</h1>
 <p>Tähän tekijät ja avataret?</p>
-
+</div>
 <div className="container-fluid">
   <div className="row mx-5 mt-4">
     
