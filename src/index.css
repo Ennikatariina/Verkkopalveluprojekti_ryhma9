@@ -43,7 +43,7 @@ h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Täm
 
 /**navbar säädöt*/
 .navbar{ 
-  background-color: #cd8d5f;
+  background-color: antiquewhite;
   height: 80px;
 }
 

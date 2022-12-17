@@ -1,8 +1,11 @@
 #homepageheader{
     background-color:antiquewhite;
   }
-  #logbackground{
+  #formbackground{
     background-color:antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 80px;
   }
   
   .card{
