@@ -5,7 +5,7 @@ import './ProductCard.css'
 
 export default function ProductCard(props){
 
-  const URL ="http://localhost/verkkokauppa_backend"
+  const URL ="http://localhost:3001"
 
     return(
         <div className='col-sm-4'>

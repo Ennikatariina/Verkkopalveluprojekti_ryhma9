@@ -15,6 +15,8 @@ import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
 import ThankYou from "./pages/ThankYou/thankyou";
 import { useEffect, useState } from 'react';
+import CategoryList from './components/CategoryList';
+import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
 
 
@@ -31,7 +33,7 @@ const meta = {
 }
 
 
-const URL ="http://localhost/verkkokauppa_backend"
+const URL ="http://localhost:3001"
 
 function App() {
   //tilanmuuttuja käyttäjälle
@@ -113,7 +115,9 @@ function logout(){
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
-            <Route path="/thankyou" element={<ThankYou/>} shoppingbasket={shoppingbasket}/>
+            <Route path="/categoryList" element={<CategoryList url={URL}/>} />
+            <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
+            <Route path="/thankyou" element={<ThankYou/>} />
 
             
         </Routes>
