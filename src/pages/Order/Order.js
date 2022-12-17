@@ -21,7 +21,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
     
     let sum = 0;
 
-//funktio joka muuttaa tuotemäärää 
+//funktio joka muuttaa tuotemäärää, näyttää ostoskorin sisällön ja hinnan
     function changeAmount(e, product, index) {
         updateAmount(e.target.value, product);
         setInputIndex(index);
@@ -48,7 +48,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                                 <td>{product.tuotenimi}</td>
                                 <td>{product.hinta} €</td>
                                 <td>
-                                    <input type = "number" style={{width: "60px"}} value={product.amount} onChange={e => changeAmount(e,product, index)} />
+                                    <input type = "number" min = "0" style={{width: "60px"}} value={product.amount} onChange={e => changeAmount(e,product, index)} />
                                     </td>
 
                                 <td><a href="#" onClick={() => removeFromShoppingbasket(product)}>

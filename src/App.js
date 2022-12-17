@@ -113,7 +113,7 @@ function logout(){
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
-            <Route path="/thankyou" element={<ThankYou/>} />
+            <Route path="/thankyou" element={<ThankYou/>} shoppingbasket={shoppingbasket}/>
 
             
         </Routes>
