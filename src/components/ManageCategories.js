@@ -7,7 +7,7 @@ export default function ManageCategories({url}) {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [addingCategory, setAddingCategory] = useState(false);
 
-    const URL ="http://localhost/verkkokauppa_backend"
+    
 
     function saveCategory(e) {
         e.preventDefault();
