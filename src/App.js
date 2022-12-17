@@ -13,9 +13,12 @@ import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
+import ThankYou from "./pages/ThankYou/thankyou";
 import { useEffect, useState } from 'react';
 import CategoryList from './components/CategoryList';
 import ManageCategories from './components/ManageCategories';
+import axios from 'axios';
+
 
 const meta = {
   title: 'Sumppi',
@@ -30,9 +33,25 @@ const meta = {
 }
 
 
-const URL ="http://localhost/verkkokauppa_backend"
+const URL ="http://localhost:3001"
 
 function App() {
+  //tilanmuuttuja käyttäjälle
+  const[loggedUser, setLoggedUser] =useState(null);
+  //tämä useEffect katsoo onko käyttäjä kirjautunut.
+  useEffect(()=>{
+    axios.post(URL+"/user_login/rest_login.php",{},{withCredentials:true})
+    .then(resp =>setLoggedUser(resp.data))
+    .catch(e=>console.log(e.message +" session hakeminen ei onnisnut app.js:ssä"))
+  },[])
+//{withCredentials:true}
+
+//uloskirjautumiseen funktio
+function logout(){
+  axios.get(URL+"/user_login/rest_logout.php",{withCredentials:true})
+  .then (resp => setLoggedUser(null))
+  .catch(e=>console.log(e.message + "Ulos kirjautumisessa jokin ei onnistunut"));
+}
 
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
@@ -43,6 +62,8 @@ function App() {
       setShoppingbasket(JSON.parse(localStorage.getItem("shoppingbasket")));
     }
   }, [])
+
+
 
   //Lisää tavaroita osotoskoriin
     function addToShoppingbasket(product) {
@@ -80,7 +101,7 @@ function App() {
   return (
     <>
     <DocumentMeta {...meta} />
-    <Navbar url={URL} shoppingbasket={shoppingbasket}/>
+    <Navbar url={URL} shoppingbasket={shoppingbasket} loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
     <Header />
     <div>
         <Routes>
@@ -96,6 +117,9 @@ function App() {
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/categoryList" element={<CategoryList url={URL}/>} />
             <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
+            <Route path="/thankyou" element={<ThankYou/>} />
+
+            
         </Routes>
     </div>
     <Footer/>

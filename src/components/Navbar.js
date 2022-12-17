@@ -7,7 +7,7 @@ import Login from '../pages/Login/Login'
 
 
 
-export default function Navbar({url, shoppingbasket}) {
+export default function Navbar({url, shoppingbasket, loggedUser, setLoggedUser, logout}) {
 
   const [categories, setCategories]=useState([]);
   const [search, setSearch] = useState([]);
@@ -95,10 +95,11 @@ function executeSearch(e){
         <div className="nav-right">
           <li className="nav-item dropdown">
               <a className="nav-link activedropdown-toggle" href="#" id="dropdown01"  data-bs-toggle="dropdown" aria-expanded="false">
-                Kirjaudu
+                
+                {loggedUser ? <button type="button" onClick={logout}>Kirjaudu ulos</button>: <h2>Kirjaudu</h2>}
               </a>  
               <ul className='dropdown-menu dropdown-menu-end dropdown-width' aria-labelledby='dropdown01'>
-                <Login />
+              {loggedUser ? <h1>Olet kirjautunut sisään</h1>: <Login setLoggedUser={setLoggedUser}/>}
               </ul>
             </li>
 
