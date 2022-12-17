@@ -15,6 +15,7 @@ export default function ManageCategories({url}) {
         axios.post(url + '/products/addcategory.php',json,{
             headers: {
                 'Content-Type' : 'application/json'
+                //'Content-Type': 'application/json;charset=utf-8' //ei auttanut ääkkösten kanssa
             }
         })
     .then((response) => {
