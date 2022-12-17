@@ -14,7 +14,8 @@ import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
 import { useEffect, useState } from 'react';
-
+import CategoryList from './components/CategoryList';
+import ManageCategories from './components/ManageCategories';
 
 const meta = {
   title: 'Sumppi',
@@ -93,8 +94,8 @@ function App() {
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
-
-            
+            <Route path="/categoryList" element={<CategoryList url={URL}/>} />
+            <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
         </Routes>
     </div>
     <Footer/>
