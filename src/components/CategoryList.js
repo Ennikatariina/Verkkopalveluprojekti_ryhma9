@@ -25,6 +25,7 @@ export default function CategoryList({url,selectedCategory,setSelectedCategory})
 
     function onCategoryChange(value) {
         setSelectedCategory(categories.filter(item => item.tuoteryhmanro === value));
+        console.log(selectedCategory);
     }
 
     return (

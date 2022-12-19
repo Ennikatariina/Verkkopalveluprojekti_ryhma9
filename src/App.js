@@ -18,7 +18,7 @@ import { useEffect, useState } from 'react';
 import CategoryList from './components/CategoryList';
 import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
-
+import ManageProducts from './components/ManageProducts';
 
 const meta = {
   title: 'Sumppi',
@@ -118,7 +118,7 @@ function logout(){
             <Route path="/categoryList" element={<CategoryList url={URL}/>} />
             <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
             <Route path="/thankyou" element={<ThankYou/>} />
-
+            <Route path="/manageProducts" element={<ManageProducts url={URL} CategoryList={CategoryList}/>} />
             
         </Routes>
     </div>
