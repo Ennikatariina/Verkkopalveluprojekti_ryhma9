@@ -39,7 +39,7 @@ export default function Login(props) {
                   <label htmlFor="floatingInput">Käyttäjätunnus</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <input type="password" value="FakePSW" className="form-control rounded-3" id="muInput" placeholder="Password" required="required" value={pw} onChange={e=>setPw(e.target.value)}></input>
+                  <input type="password" className="form-control rounded-3" id="muInput" placeholder="Password" required="required" value={pw} onChange={e=>setPw(e.target.value)}></input>
                   <label htmlFor="floatingPassword">Salasana</label>
                 </div>
                 <p className="form-row">
