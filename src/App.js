@@ -58,6 +58,9 @@ function logout(){
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
 
+  //categoryListiin tilamuuttuja
+  const [selectedCategory, setSelectedCategory] =useState(1);
+
   //lukee localstoragesta ostoskorin tiedot mikäli selain refreshataan tai suljetaan
   useEffect(() => {
     if ("shoppingbasket" in localStorage) {
