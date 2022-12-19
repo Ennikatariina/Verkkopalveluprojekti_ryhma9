@@ -119,7 +119,7 @@ function executeSearch(e){
                 {loggedUser ? <button type="button" onClick={logout}>Kirjaudu ulos</button>: <h2>Kirjaudu</h2>}
               </a>  
               <ul className='dropdown-menu dropdown-menu-end dropdown-width' aria-labelledby='dropdown01'>
-              {loggedUser ? <h1>Olet kirjautunut sisään</h1>: <Login setLoggedUser={setLoggedUser}/>}
+              {loggedUser ? null: <Login setLoggedUser={setLoggedUser}/>}
               </ul>
             </li>
 
