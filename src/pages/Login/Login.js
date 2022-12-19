@@ -16,7 +16,7 @@ export default function Login(props) {
     axios.post(URL+"/user_login/rest_login.php",formData,{withCredentials:true})
     .then (
       resp =>{ 
-        console.log(resp.data+" Heps") 
+        console.log(resp.data.admin+" Heps") 
         props.setLoggedUser(resp.data)
   })
     .catch (e=> console.log(e))

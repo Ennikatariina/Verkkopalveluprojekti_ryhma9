@@ -4,7 +4,7 @@ import "../index.css"
 import axios from 'axios'
 import ShoppingBasket from '../components/ShoppingBasket'
 import Login from '../pages/Login/Login'
-
+import ManageCategories from './ManageCategories'
 
 
 export default function Navbar({url, shoppingbasket, loggedUser, setLoggedUser, logout}) {
@@ -16,6 +16,7 @@ export default function Navbar({url, shoppingbasket, loggedUser, setLoggedUser, 
 
   useEffect(() =>{
     console.log(url);
+    console.log(loggedUser)
     axios.get(url+ '/products/getcategories.php')
       .then((response)=>{
         const json=response.data;
@@ -91,6 +92,25 @@ function executeSearch(e){
               <button className="btn btn-dark" type="submit">Löydä!</button>
             </form>
           </div>*/}
+        </div>
+        <div className="nav-right">
+          <li className="nav-item dropdown">
+              <a className="nav-link activedropdown-toggle" href="#" id="dropdown01"  data-bs-toggle="dropdown" aria-expanded="false">
+                
+                {loggedUser ? loggedUser.admin ?
+                 
+                 <button type="button" className="btn btn-lg mt-5 position-relative top-50 start-50 translate-middle">Admin</button>
+                 :<p></p>:<p></p>}
+              </a>  
+              <ul className='dropdown-menu dropdown-menu-end dropdown-width' aria-labelledby='dropdown01'>
+              {loggedUser ? <div><div><Link to="/manageCategories">Tuoteryhmä ylläpito</Link></div><div>
+              <Link to="/manageProducts">Tuotteiden ylläpito</Link>
+              </div></div>: <Login setLoggedUser={setLoggedUser}/>}
+              </ul>
+            </li>
+
+        {/**<Link className="nav-link active" onClick= loginClick>Kirjaudu</Link>
+         { /**<a href="#" className="nav-link active">Kirjaudu</a>**/}
         </div>
         <div className="nav-right">
           <li className="nav-item dropdown">

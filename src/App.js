@@ -41,7 +41,10 @@ function App() {
   //tämä useEffect katsoo onko käyttäjä kirjautunut.
   useEffect(()=>{
     axios.post(URL+"/user_login/rest_login.php",{},{withCredentials:true})
-    .then(resp =>setLoggedUser(resp.data))
+    .then(resp =>{
+      setLoggedUser(resp.data)
+      
+    })
     .catch(e=>console.log(e.message +" session hakeminen ei onnisnut app.js:ssä"))
   },[])
 //{withCredentials:true}
