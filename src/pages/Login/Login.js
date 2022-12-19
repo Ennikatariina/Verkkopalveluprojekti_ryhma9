@@ -16,11 +16,12 @@ export default function Login(props) {
     axios.post(URL+"/user_login/rest_login.php",formData,{withCredentials:true})
     .then (
       resp =>{ 
-        console.log(resp.data+" Heps") 
+        console.log(resp.data.admin+" Heps") 
         props.setLoggedUser(resp.data)
   })
     .catch (e=> console.log(e))
   }
+
 
     return (
     <div className="modal modal-signin position-static d-block bg-secondary py-5" tabIndex="-1" role="dialog" id="modalSignin">
@@ -38,7 +39,7 @@ export default function Login(props) {
                   <label htmlFor="floatingInput">Käyttäjätunnus</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control rounded-3" id="floatingPassword" placeholder="Password" required="required" value={pw} onChange={e=>setPw(e.target.value)}></input>
+                  <input type="password" className="form-control rounded-3" id="muInput" placeholder="Password" required="required" value={pw} onChange={e=>setPw(e.target.value)}></input>
                   <label htmlFor="floatingPassword">Salasana</label>
                 </div>
                 <p className="form-row">
