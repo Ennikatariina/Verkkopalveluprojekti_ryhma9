@@ -7,11 +7,12 @@ import axios from 'axios';
 export default function thankYou({url,  setLoggedUser, loggedUser, shoppingbasket }) {
     
     function orderProducts() {
-       /* let obj={kayttajatunnus: 'siiri'}
-        shoppingbasket.push(obj);
-        console.log(shoppingbasket)*/
+       let obj=[{kayttajatunnus: 'siiri'}]
+        obj.push(shoppingbasket);
+        console.log(obj)
+
         
-        axios.post(url + "/shoppingbasket/order.php",shoppingbasket , { withCredentials: true })
+        axios.post(url + "/shoppingbasket/order.php",obj , { withCredentials: true })
             .then(
                 resp => {
                     console.log(resp.data + " tilausvahvistus")
