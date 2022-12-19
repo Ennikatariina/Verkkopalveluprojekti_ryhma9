@@ -18,7 +18,7 @@ import { useEffect, useState } from 'react';
 import CategoryList from './components/CategoryList';
 import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
-
+import ManageProducts from './components/ManageProducts';
 
 const meta = {
   title: 'Sumppi',
