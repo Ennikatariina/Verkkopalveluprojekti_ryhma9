@@ -44,6 +44,7 @@ function App() {
     .then(resp =>setLoggedUser(resp.data))
     .catch(e=>console.log(e.message +" session hakeminen ei onnisnut app.js:ssä"))
   },[])
+  console.log(loggedUser)
 //{withCredentials:true}
 
 //uloskirjautumiseen funktio
@@ -116,8 +117,8 @@ function logout(){
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/categoryList" element={<CategoryList url={URL}/>} />
-            <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
-            <Route path="/thankyou" element={<ThankYou/>} />
+            <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} setLoggedUser={setLoggedUser} loggedUser={loggedUser}/>} />
+            <Route path="/thankyou" element={<ThankYou url={URL} setLoggedUser={setLoggedUser} loggedUser={loggedUser} shoppingbasket={shoppingbasket}/>} />
 
             
         </Routes>

@@ -1,12 +1,81 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import Login from '../Login/Login'
+import axios from 'axios';
 
-export default function thankYou(product, shoppingbasket) {
-    return(
-        <div className="mx-5"> <h1>Kiitos tilauksestasi!</h1>
-        <h3>ostoskorin sisältö {product.amount}</h3>
-        </div>
+export default function thankYou({url,  setLoggedUser, loggedUser, shoppingbasket }) {
+    
+    function orderProducts() {
+       /* let obj={kayttajatunnus: 'siiri'}
+        shoppingbasket.push(obj);
+        console.log(shoppingbasket)*/
+        
+        axios.post(url + "/shoppingbasket/order.php",shoppingbasket , { withCredentials: true })
+            .then(
+                resp => {
+                    console.log(resp.data + " tilausvahvistus")
+                }) .catch(e => console.log(e))
+    }
+
+
+    console.log(loggedUser + "Thanskyou")
+    let sum = 0
+    let totalPrice = 0
+    return (
+        <>
+
+            {loggedUser ?
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <h2>Tilauksen tekija loggerUser</h2>
+                            <h2>Vahvista tilaus</h2>
+                            <button className="btn btn-warning btn-lg mt-5 position-relative top-30 start-50 translate-middle"
+                                onClick={orderProducts}>Vahvista tilaus</button>
+                        </div>
+                        <div className="col">
+                            <div className="mx-5">
+                                <h1>Tilaus sisältää</h1>
+
+
+                                <table className="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tuote</th>
+                                            <th scope="col">Kappalemäärä</th>
+                                            <th scope="col">Hinta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {shoppingbasket.map((product) => {
+                                            sum = parseFloat(product.hinta) * (product.amount);
+                                            totalPrice += parseFloat(product.hinta) * (product.amount);
+                                            return (
+                                                <tr >
+                                                    <td>{product.tuotenimi}</td>
+                                                    <td>{product.amount} </td>
+                                                    <td>{sum} €</td>
+                                                </tr>
+                                            )
+                                        })}
+                                        <tr>
+                                            <td className="fw-bold">Loppusumma</td>
+                                            <td className="fw-bold"></td>
+                                            <td className="fw-bold">{totalPrice.toFixed(2)} €</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                : <Login setLoggedUser={setLoggedUser} />}
+
+
+        </>
     )
 }
 
