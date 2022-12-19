@@ -19,6 +19,7 @@ import CategoryList from './components/CategoryList';
 import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
 import ManageProducts from './components/ManageProducts';
+import Yhteydenotto from './components/Yhteydenotto';
 
 const meta = {
   title: 'Sumppi',
@@ -119,9 +120,10 @@ function logout(){
             <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} />} />
             <Route path="/thankyou" element={<ThankYou/>} />
             <Route path="/manageProducts" element={<ManageProducts url={URL} CategoryList={CategoryList}/>} />
-            
+            <Route path="/yhteydenotto" element={<Yhteydenotto/>} />
         </Routes>
     </div>
+    
     <Footer/>
     </>
   );
