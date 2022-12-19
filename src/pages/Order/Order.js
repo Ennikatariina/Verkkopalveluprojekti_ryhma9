@@ -3,7 +3,7 @@ import uuid from "react-uuid";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Order({shoppingbasket, removeFromShoppingbasket, updateAmount}) {
+export default function Order({shoppingbasket, removeFromShoppingbasket, updateAmount,  setLoggedUser, loggedUser}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
 
@@ -68,7 +68,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                 </tbody>
             </table>
             <Link to="/thankyou">
-            <button type="button" className="btn btn-warning btn-lg mt-5 position-relative top-50 start-50 translate-middle">Tilaa tästä!</button>
+            <button type="button" className="btn btn-warning btn-lg mt-5 position-relative top-50 start-50 translate-middle">Siirry kassalle</button>
             </Link>
         </div>
     )
