@@ -10,14 +10,14 @@ export default function ManageProducts({url}) {
     const [productName, setProductName] = useState('');
     const [price,setPrice] = useState('');
   
-
+//lopusta puuttuu muidenkin tietojen lisääminen tuotteisiin, jos siis halutaan lisätä nimen ja hinnan lisäksi muita tietoja kun admin lisää tuotteita.
 
     useEffect(() => {
         console.log('Kategoria vaihtui');
         console.log(selectedCategory);
     if (selectedCategory !== null && selectedCategory !== undefined) {
         console.log(selectedCategory.tuoteryhmanro);
-        /**axios.get(url + '/products/getproducts.php/' + selectedCategory.tuoteryhmanro)
+        axios.get(url + '/products/getproducts.php/' + selectedCategory.tuoteryhmanro)
         .then((response) => {
             const json = response.data;
             if (json) {
@@ -26,7 +26,7 @@ export default function ManageProducts({url}) {
             }
         }).catch (error => {
             alert(error.response === undefined ? error : error.response.data.error);
-        })*/
+        })
       }
     }, [url,selectedCategory])
     
