@@ -19,8 +19,8 @@ export default function MadeBy() {
       <div className="card" style={{width: "auto"}}>
         <img src={picture4} className="img-thumbnail" alt="..."/>
         <div className="card-body">
-          <h3>Aila-Mari</h3>
-          <p className="card-text">juu</p>
+          <h3>Aila-Maria</h3>
+          <p className="card-text"></p>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ export default function MadeBy() {
         <img src={picture5} className="img-thumbnail" alt="..."/>
         <div className="card-body">
           <h3>Enni</h3>
-          <p className="card-text"> juu
+          <p className="card-text"> 
           </p>
         </div> 
       </div>
@@ -39,7 +39,7 @@ export default function MadeBy() {
         <img src={picture6} className="img-thumbnail" alt="..."/>
         <div className="card-body">
           <h3>Jenny</h3>
-          <p className="card-text">juu 
+          <p className="card-text"> 
              </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function MadeBy() {
         <img src={picture7} className="img-thumbnail" alt="..."/>
         <div className="card-body">
           <h3>Jonna</h3>
-          <p className="card-text">juu</p>
+          <p className="card-text"></p>
         </div>
       </div>
     </div>
