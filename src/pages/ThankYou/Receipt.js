@@ -5,8 +5,10 @@ import Login from '../Login/Login'
 import axios from 'axios';
 import thankYou from "./ThankYou";
 import { redirect } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-export default function receipt({url,  setLoggedUser, loggedUser, shoppingbasket }) {
+export default function Receipt({url,  setLoggedUser, loggedUser, shoppingbasket }) {
+    const navigate= useNavigate();
     
     async function orderProducts() {
        let obj=[{kayttajatunnus: loggedUser}]
@@ -16,11 +18,12 @@ export default function receipt({url,  setLoggedUser, loggedUser, shoppingbasket
         
         await axios.post(url + "/shoppingbasket/order.php",obj , { withCredentials: true })
             .then(
+                navigate("/thankyou"),
                 resp => {
                     console.log(resp.data + " tilausvahvistus")
-                }) .catch(e => console.log(e))
+                }).catch(e => console.log(e))
               
-       return redirect("/thankyou")
+      
 
     }
     
