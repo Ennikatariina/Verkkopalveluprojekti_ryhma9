@@ -53,7 +53,7 @@ function saveProduct(e) {
 if(!addingProduct) {
     return (
     <>
-    <h3>Manage Products</h3>
+    <h3 className="mx-5">Manage Products</h3>
     <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}  />
     <table className="table">
         <thead>
