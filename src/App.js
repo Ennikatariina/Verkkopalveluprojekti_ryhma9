@@ -8,7 +8,6 @@ import Drinks from './pages/Drinks/Drinks';
 import Snacks from './pages/Snacks/Snacks';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
-import Form from './pages/Form/Form';
 import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
@@ -123,7 +122,6 @@ function logout(){
             <Route path="/snacks" element={<Snacks/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
-            <Route path="/form" element={<Form/>} />
             <Route path="/madeby" element={<MadeBy/>} />
             <Route path="/products/:tuoteryhmanro" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/order" element={<Order shoppingbasket={shoppingbasket} removeFromShoppingbasket={removeFromShoppingbasket} updateAmount={updateAmount}/>} />
