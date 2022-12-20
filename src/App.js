@@ -12,13 +12,14 @@ import MadeBy from './pages/MadeBy/MadeBy';
 import DocumentMeta from 'react-document-meta';
 import Products from './pages/Products/Products';
 import Order from "./pages/Order/Order";
-import ThankYou from "./pages/ThankYou/thankyou";
+import Receipt from "./pages/ThankYou/Receipt";
 import { useEffect, useState } from 'react';
 import CategoryList from './components/CategoryList';
 import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
 import ManageProducts from './components/ManageProducts';
 import Contact from './components/Contact';
+import ThankYou from "./pages/ThankYou/ThankYou";
 
 const meta = {
   title: 'Sumppi',
@@ -120,9 +121,10 @@ function logout(){
             <Route path="/search/:searchPhrase" element={<Products url={URL} addToShoppingbasket={addToShoppingbasket}/>} />
             <Route path="/categoryList" element={<CategoryList url={URL}/>} />
             <Route path="/manageCategories" element={<ManageCategories url={URL} CategoryList={CategoryList} setLoggedUser={setLoggedUser} loggedUser={loggedUser}/>} />
-            <Route path="/thankyou" element={<ThankYou url={URL} setLoggedUser={setLoggedUser} loggedUser={loggedUser} shoppingbasket={shoppingbasket}/>} />
+            <Route path="/receipt" element={<Receipt url={URL} setLoggedUser={setLoggedUser} loggedUser={loggedUser} shoppingbasket={shoppingbasket}/>} />
             <Route path="/manageProducts" element={<ManageProducts url={URL} CategoryList={CategoryList}/>}/>
-            <Route path="contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
     </div>
     
