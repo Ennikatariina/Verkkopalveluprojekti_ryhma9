@@ -19,7 +19,7 @@ export default function Login(props) {
         console.log(resp.data.admin+" Heps") 
         props.setLoggedUser(resp.data)
   })
-    .catch (e=> console.log(e))
+    .catch (e=> alert("käyttäjätunnus tai salasana väärin"))
   }
 
 

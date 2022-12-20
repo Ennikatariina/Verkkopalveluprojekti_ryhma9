@@ -67,7 +67,7 @@ export default function Order({shoppingbasket, removeFromShoppingbasket, updateA
                     </tr>
                 </tbody>
             </table>
-            <Link to="/thankyou">
+            <Link to="/receipt">
             <button type="button" className="btn btn-warning btn-lg mt-5 position-relative top-50 start-50 translate-middle">Siirry kassalle</button>
             </Link>
         </div>
