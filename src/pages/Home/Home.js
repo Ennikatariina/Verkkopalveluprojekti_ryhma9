@@ -1,5 +1,5 @@
 import React from 'react'
-import Yhteydenotto from '../../components/Yhteydenotto'
+import Yhteydenotto from '../../components/Contact'
 import picture1 from '../../images/tarjoiluehdotus.jpg'
 import './home.css'
 
