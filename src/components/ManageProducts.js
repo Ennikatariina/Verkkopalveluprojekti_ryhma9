@@ -9,6 +9,8 @@ export default function ManageProducts({url}) {
     const [addingProduct, setAddingProduct] = useState(false);
     const [productName, setProductName] = useState('');
     const [price,setPrice] = useState('');
+    const [description,setDescription] = useState();
+    //description nyt lisätty jos sais kuvauksen myös tietokantaan siirtymään. Huomaan myös tuolla alempana.
   
 //lopusta puuttuu muidenkin tietojen lisääminen tuotteisiin, jos siis halutaan lisätä nimen ja hinnan lisäksi muita tietoja kun admin lisää tuotteita.
 
@@ -33,7 +35,7 @@ export default function ManageProducts({url}) {
 function saveProduct(e) {
     e.preventDefault();
     //const json = JSON.stringify({name: productName, price: price,categoryid: selectedCategory.id});
-    const json = JSON.stringify({tuotenimi: productName, hinta: price,tuoteryhmanro: selectedCategory.id});
+    const json = JSON.stringify({tuotenimi: productName,kuvaus: description, hinta: price,tuoteryhmanro: selectedCategory.id});
     axios.post(url + '/products/addproduct.php',json,{
         headers: {
             'Content-Type' : 'application/json'
@@ -57,6 +59,7 @@ if(!addingProduct) {
         <thead>
             <tr key={uuid()}>
                 <th>Tuotenimi</th>
+                <th>Kuvaus</th>
                 <th>Hinta</th>
             </tr>
         </thead> 
@@ -64,6 +67,7 @@ if(!addingProduct) {
             {products.map((product) => (
                 <tr key={uuid()}>
                     <td>{product.tuotenimi}</td>
+                    <td>{product.kuvaus}</td>
                     <td>{product.hinta} €</td>
                 </tr>
             ))}
@@ -82,6 +86,10 @@ if(!addingProduct) {
             <div>
                 <label>Product name</label>
                 <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)}/>
+            </div>
+            <div>
+                <label>Tuotteen kuvaus</label>
+                <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
             </div>
             <div>
                 <label>Product price</label>
