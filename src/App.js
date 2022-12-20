@@ -58,11 +58,16 @@ function logout(){
   .catch(e=>console.log(e.message + "Ulos kirjautumisessa jokin ei onnistunut"));
 }
 
+
+//categoryListiin tilamuuttuja
+    const [selectedCategory, setSelectedCategory] =useState();
+      
+    /* function handleCategoryChange(value) {
+        setSelectedCategory(value.target.value);
+    }*/
+
   //ostoskorin tilamuuttuja
   const [shoppingbasket, setShoppingbasket] = useState([]);
-
-  //categoryListiin tilamuuttuja
-  const [selectedCategory, setSelectedCategory] =useState(1);
 
   //lukee localstoragesta ostoskorin tiedot mikäli selain refreshataan tai suljetaan
   useEffect(() => {
