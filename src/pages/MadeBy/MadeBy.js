@@ -19,7 +19,7 @@ export default function MadeBy() {
       <div className="card" style={{width: "auto"}}>
         <img src={picture4} className="img-thumbnail" alt="..."/>
         <div className="card-body">
-          <h3>Aila-Mari</h3>
+          <h3>Aila-Maria</h3>
           <p className="card-text"></p>
         </div>
       </div>
