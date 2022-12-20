@@ -17,7 +17,7 @@ export default function ManageProducts({url}) {
     useEffect(() => {
         console.log('Kategoria vaihtui');
         console.log(selectedCategory);
-    if (selectedCategory !== null && selectedCategory !== undefined) {
+    if (selectedCategory !== null ) {
         console.log(selectedCategory.tuoteryhmanro);
         axios.get(url + '/products/getproducts.php/' + selectedCategory.tuoteryhmanro)
         .then((response) => {
@@ -35,7 +35,8 @@ export default function ManageProducts({url}) {
 function saveProduct(e) {
     e.preventDefault();
     //const json = JSON.stringify({name: productName, price: price,categoryid: selectedCategory.id});
-    const json = JSON.stringify({tuotenimi: productName,kuvaus: description, hinta: price,tuoteryhmanro: selectedCategory.id});
+    const json = JSON.stringify({tuotenimi: productName,kuvaus: description, hinta: price,tuoteryhmanro: selectedCategory.tuoteryhmanro});
+    console.log(json);
     axios.post(url + '/products/addproduct.php',json,{
         headers: {
             'Content-Type' : 'application/json'
@@ -53,8 +54,8 @@ function saveProduct(e) {
 if(!addingProduct) {
     return (
     <>
-    <h3>Manage Products</h3>
-    <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}  />
+    <h3>Tuotteiden Ylläpito</h3>
+    <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory} />
     <table className="table">
         <thead>
             <tr key={uuid()}>

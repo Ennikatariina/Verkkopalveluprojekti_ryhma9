@@ -16,7 +16,7 @@ export default function CategoryList({url,selectedCategory,setSelectedCategory})
                     setSelectedCategory(json[0]);
                 }
                 setCategories(json);
-                
+               console.log(json[0]); 
             }
         }).catch (error => {
             alert(error.response === undefined ? error : error.response.data.error);
@@ -25,13 +25,19 @@ export default function CategoryList({url,selectedCategory,setSelectedCategory})
 
     function onCategoryChange(value) {
         //setSelectedCategory(categories.filter(item => item.id === value));
-        setSelectedCategory(categories.filter(item => item.id === value));
+        //filteröi koko kategorian staten ja palauttaa ehdonmukaiset rivit ja tässä se ehto on tuoteryhma == value. Ei toiminut aikasemmin koska oli ===.
+        const testi = categories.filter(item => item.tuoteryhmanro == value);
+        setSelectedCategory(testi[0]);
+       // setSelectedCategory(categories.filter(item => item.tuoteryhmanro == value));
+        /*const testi = categories.filter(item => item.tuoteryhmanro === value);
+        console.log(testi);
         console.log(selectedCategory);
+        console.log(value);*/
     }
 
     return (
         //<select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
-        <select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
+        <select value={selectedCategory?.tuoteryhmanro} onChange={(e) => onCategoryChange(e.target.value)}>
         {categories.map((category) => (
             //<option key={category.id} value={category.id}>{category.name}</option>
             <option key={category.tuoteryhmanro} value={category.tuoteryhmanro}>{category.tuoteryhmanimi}</option>
