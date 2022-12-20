@@ -1,5 +1,5 @@
 import React from 'react'
-import Yhteydenotto from '../../components/Contact'
+import Contact from '../../components/Contact'
 import picture1 from '../../images/tarjoiluehdotus.jpg'
 import './home.css'
 
@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       
        <div>
-     <Yhteydenotto/>
+     <Contact/>
      </div>
       
     </div>
