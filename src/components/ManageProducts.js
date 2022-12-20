@@ -54,8 +54,8 @@ function saveProduct(e) {
 if(!addingProduct) {
     return (
     <>
-    <h3>Tuotteiden Ylläpito</h3>
-    <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory} />
+    <h3 className="mx-5">Manage Products</h3>
+    <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}  />
     <table className="table">
         <thead>
             <tr key={uuid()}>

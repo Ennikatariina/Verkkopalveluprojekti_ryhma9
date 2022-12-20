@@ -43,7 +43,7 @@ export default function Products({url, addToShoppingbasket}) {
 
    return (
        <div>
-         <h3> {category} </h3> {/**{category} otsikon sisällä eli näkyy tuoteryhmän nimi */}
+         <h3 className="ms-3"> {category} </h3> {/**{category} otsikon sisällä eli näkyy tuoteryhmän nimi */}
          <div className="container-lg">
             <div className="row mx-5 mt-4">
          {products.map(product => (

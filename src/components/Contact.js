@@ -12,7 +12,9 @@ export default function Contact() {
   const[puhnro, setPuhnro]=useState("")
   const[viesti, setViesti]=useState("")
 
-    function sendContact(){
+    function sendContact(e){
+      e.preventDefault();
+
     const formData =new FormData();
     formData.append("etunimi", etunimi);
     formData.append("sukunimi", sukunimi);
@@ -24,9 +26,10 @@ export default function Contact() {
     let object ={}
     formData.forEach((value, key) => object[key]=value);
     let json=JSON.stringify(object)
+    console.log(json);
 
     axios.post(URL+"/contact/contact.php",json,{withCredentials:true})
-    .then (response =>{ console.log(response.data.token) 
+    .then (response =>{ console.log(response.data) 
          }).catch (e=> console.log(e))
   }
 
