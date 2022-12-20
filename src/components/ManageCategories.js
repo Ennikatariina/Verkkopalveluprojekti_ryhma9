@@ -31,7 +31,7 @@ export default function ManageCategories({url}) {
     if(!addingCategory) {
         return(
             <>
-            <h3>Ylläpidä tuoteryhmiä</h3>
+            <h3 className="mx-3">Ylläpidä tuoteryhmiä</h3>
             <div>
                 <label>Tuoteryhmä</label>
                 <CategoryList

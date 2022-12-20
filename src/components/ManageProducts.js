@@ -82,7 +82,7 @@ if(!addingProduct) {
 } else {
     return (
         <>
-        <h3>Add New Product</h3>
+        <h3>Lisää uusi tuote</h3>
         <form onSubmit={saveProduct}>
             <div>
                 <label>Product name</label>
