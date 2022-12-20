@@ -48,7 +48,8 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div >
-                    <div className="col-6 col-md-3 mb-3">
+                   
+                    <div className="col-3 col-md-3 mb-3">
                     <GoogleMaps/>
                     </div>
                     
