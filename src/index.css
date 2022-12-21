@@ -25,20 +25,21 @@ code {
 
 h1 { /**Headerin(main) iso teksti ("logo"). Tuleeko verkkosivulle muita h1? Tämän vois toki vielä muuttaa*/
   font-family: 'Pacifico', cursive;
-  text-shadow: 2px 2px rgb(240, 245, 242);
+  
  
 }
 
 .lead{ /**Tällä voi muokata headerissa, otsikon alla olevaa tekstiä "maku,joka muistetaan"*/
-  font-size: 28px;
+  font-size: 38px;
   color: rgb(240, 245, 242);
   text-shadow: 2px 2px #0f0e0e;
   padding-top: 10px;
 }
 
 .display-4 {  /**tällä voi säätää headerissa(main) otsikon kokoa*/
-  font-size: 130px;
-  padding-bottom: 40px;
+  font-size: 140px;
+  padding-bottom: 30px;
+  text-shadow: 1px 1px rgb(240, 245, 242);
 }
 
 .navbar-brand { /**tällä voi säätää navbarin Sumppia*/
