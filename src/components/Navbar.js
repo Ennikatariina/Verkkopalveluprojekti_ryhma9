@@ -116,7 +116,7 @@ function executeSearch(e){
           <li className="nav-item dropdown">
               <a className="nav-link activedropdown-toggle" href="#" id="dropdown01"  data-bs-toggle="dropdown" aria-expanded="false">
                 
-                {loggedUser ? <button type="button" onClick={logout}>Kirjaudu ulos</button>: <h2>Kirjaudu</h2>}
+                {loggedUser ? <button type="button" onClick={logout}>Kirjaudu ulos</button>: <h5 className='navkirj'>Kirjaudu</h5>}
               </a>  
               <ul className='dropdown-menu dropdown-menu-end dropdown-width' aria-labelledby='dropdown01'>
               {loggedUser ? null: <Login setLoggedUser={setLoggedUser}/>}

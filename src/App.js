@@ -19,7 +19,7 @@ import ManageCategories from './components/ManageCategories';
 import axios from 'axios';
 import ManageProducts from './components/ManageProducts';
 import Contact from './components/Contact';
-import ThankYou from "./pages/ThankYou/ThankYou";
+import ThankYou from "./pages/ThankYou/Thankyou";
 
 const meta = {
   title: 'Sumppi',

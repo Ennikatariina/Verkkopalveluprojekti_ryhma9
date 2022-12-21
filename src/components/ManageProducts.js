@@ -10,9 +10,8 @@ export default function ManageProducts({url}) {
     const [productName, setProductName] = useState('');
     const [price,setPrice] = useState('');
     const [description,setDescription] = useState();
-    //description nyt lisätty jos sais kuvauksen myös tietokantaan siirtymään. Huomaan myös tuolla alempana.
+    //description nyt lisätty, jotta saadaan kuvaus myös tietokantaan siirtymään. Huomaan myös tuolla alempana.
   
-//lopusta puuttuu muidenkin tietojen lisääminen tuotteisiin, jos siis halutaan lisätä nimen ja hinnan lisäksi muita tietoja kun admin lisää tuotteita.
 
     useEffect(() => {
         console.log('Kategoria vaihtui');
@@ -85,7 +84,7 @@ if(!addingProduct) {
         <h3>Lisää uusi tuote</h3>
         <form onSubmit={saveProduct}>
             <div>
-                <label>Product name</label>
+                <label>Tuotteen nimi</label>
                 <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)}/>
             </div>
             <div>
@@ -93,11 +92,11 @@ if(!addingProduct) {
                 <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
             </div>
             <div>
-                <label>Product price</label>
+                <label>Tuotteen hinta</label>
                 <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
             </div>
-            <button type="button" onClick={() => setAddingProduct(false)}>Cancel</button>
-            <button type="submit">Save</button>
+            <button type="button" onClick={() => setAddingProduct(false)}>Peruuta</button>
+            <button type="submit">Tallenna</button>
             </form>
         </>
     )

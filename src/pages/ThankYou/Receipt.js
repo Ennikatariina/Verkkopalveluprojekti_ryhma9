@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Login from '../Login/Login'
 import axios from 'axios';
-import thankYou from "./ThankYou";
+import thankYou from "./Thankyou";
 import { redirect } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
